@@ -1,0 +1,6 @@
+{
+  "name": "Quran N-Grams",
+  "description": "Quran N-Grams",
+  "image": "heroku/scala",
+  "addons": [ "heroku-postgresql" ]
+}
