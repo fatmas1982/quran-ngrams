@@ -62,6 +62,7 @@ object Application extends Controller {
 
   def search(ngram: Option[String]) = Action {
     val ngramString : String = ngram.getOrElse("")
+    
 
     Ok(views.html.search(generateSearchResults(ngramString), ngramString))
   }
