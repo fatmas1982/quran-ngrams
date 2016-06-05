@@ -39,8 +39,7 @@ Seq[Any](format.raw/*1.31*/("""
       <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=12"></span>12 words n-grams</a>
       <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=13"></span>13 words n-grams</a>
       <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=14"></span>14 words n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=15"></span>15 words n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=16"></span>16 words n-grams</a>
+   
  </div>
 
 </div>
@@ -52,10 +51,10 @@ Seq[Any](format.raw/*1.31*/("""
                     <th>Repeated</th>
                 </tr>
                 </thead>
-            """),_display_(/*31.14*/for((ngram, freq) <- ngrams) yield /*31.42*/ {_display_(Seq[Any](format.raw/*31.44*/("""
-     """),format.raw/*32.6*/("""<tr><td><a href="search?ngram="""),_display_(/*32.37*/ngram),format.raw/*32.42*/("""">"""),_display_(/*32.45*/ngram),format.raw/*32.50*/("""</a></td><td>"""),_display_(/*32.64*/freq),format.raw/*32.68*/("""</td></tr>
-     """)))}),format.raw/*33.7*/("""
-  """),format.raw/*34.3*/("""</table>
+            """),_display_(/*30.14*/for((ngram, freq) <- ngrams) yield /*30.42*/ {_display_(Seq[Any](format.raw/*30.44*/("""
+     """),format.raw/*31.6*/("""<tr><td><a href="search?ngram="""),_display_(/*31.37*/ngram),format.raw/*31.42*/("""">"""),_display_(/*31.45*/ngram),format.raw/*31.50*/("""</a></td><td>"""),_display_(/*31.64*/freq),format.raw/*31.68*/("""</td></tr>
+     """)))}),format.raw/*32.7*/("""
+  """),format.raw/*33.3*/("""</table>
 </div>
 
 """)))}))
@@ -78,11 +77,11 @@ Seq[Any](format.raw/*1.31*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 05 05:37:01 UTC 2016
+                  DATE: Sun Jun 05 05:38:53 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
-                  HASH: c76505553bea14f916a4c03fa31e5220b2ca05c9
-                  MATRIX: 552->1|676->30|704->33|742->63|781->65|809->67|2136->1367|2180->1395|2220->1397|2253->1403|2311->1434|2337->1439|2367->1442|2393->1447|2434->1461|2459->1465|2506->1482|2536->1485
-                  LINES: 20->1|25->1|27->3|27->3|27->3|29->5|55->31|55->31|55->31|56->32|56->32|56->32|56->32|56->32|56->32|56->32|57->33|58->34
+                  HASH: 970d69fb7125e058bc9fb44ab86e20be4b72b313
+                  MATRIX: 552->1|676->30|704->33|742->63|781->65|809->67|1930->1161|1974->1189|2014->1191|2047->1197|2105->1228|2131->1233|2161->1236|2187->1241|2228->1255|2253->1259|2300->1276|2330->1279
+                  LINES: 20->1|25->1|27->3|27->3|27->3|29->5|54->30|54->30|54->30|55->31|55->31|55->31|55->31|55->31|55->31|55->31|56->32|57->33
                   -- GENERATED --
               */
           
