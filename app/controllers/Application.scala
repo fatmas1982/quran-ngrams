@@ -20,7 +20,7 @@ object Application extends Controller {
 
    val occuranceThreshold = if (numOfWords==1) 1 else 3
    
-   val words = if (numOfWords==1) text.split(" ").map(_.filterNot(x => punctuations contains x)) else text.split(" ")
+   val words = if (numOfWords==1) text.split(" ").map(_.filterNot{x => punctuations contains x}) else text.split(" ")
    
          
     
