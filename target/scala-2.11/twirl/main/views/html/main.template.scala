@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.32*/("""
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script>
         (function(i, s, o, g, r, a, m) """),format.raw/*15.40*/("""{"""),format.raw/*15.41*/("""
             """),format.raw/*16.13*/("""i['GoogleAnalyticsObject'] = r;
@@ -82,10 +82,10 @@ Seq[Any](format.raw/*1.32*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 05 17:42:56 UTC 2016
+                  DATE: Sun Jun 05 17:45:42 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/main.scala.html
-                  HASH: 88fa8a9852355596a90328f1f5ab306236aaeaf7
-                  MATRIX: 530->1|655->31|683->33|753->77|778->82|1192->468|1221->469|1262->482|1360->552|1389->553|1434->570|1514->622|1543->623|1783->836|1812->837|2043->1042|2071->1049|2099->1050
+                  HASH: 6db77523a74f0b50d7055396181b43f00c552100
+                  MATRIX: 530->1|655->31|683->33|753->77|778->82|1268->544|1297->545|1338->558|1436->628|1465->629|1510->646|1590->698|1619->699|1859->912|1888->913|2119->1118|2147->1125|2175->1126
                   LINES: 20->1|25->1|27->3|32->8|32->8|39->15|39->15|40->16|41->17|41->17|42->18|43->19|43->19|49->25|49->25|61->37|61->37|62->38
                   -- GENERATED --
               */
