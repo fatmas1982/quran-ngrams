@@ -20,12 +20,16 @@ object Application extends Controller {
 
    val occuranceThreshold = if (numOfWords==1) 0 else 3
    
-   val words = if (numOfWords==1) text.split(" ").map(_.filterNot(x => punctuations contains x)) else text.split(" ")
+   val words = if (numOfWords==1) text.split(" ").map(_.filterNot(x => punctuations contains x)) // Split text into words and remove puntuation marks if 1 word n-grams
+   else 
+   text.split(" ")
    
          
     
     
     
+    
+    //Scala recipe for creating n-grams.
     val m = words.sliding(numOfWords)
     .toList
     .map(_.mkString(" "))
@@ -33,6 +37,7 @@ object Application extends Controller {
     .map{case(ngram, occurrences) => (ngram, occurrences.length)}
     .filter{case(ngram, occurrences) => occurrences > occuranceThreshold }
     .toList
+    .sortBy{case(ngram, occurrences) => occurrences}
 
     if (numOfWords==1) {
       m.filterNot{case(ngram, repeat) => stopWords contains ngram}
