@@ -33,7 +33,7 @@ Seq[Any](format.raw/*1.31*/("""
     <p>This Scala app lets you perform n-gram Analytics on the English Translation of Quran</p>
 
 
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=10"></span>1 word n-grams</a>
+      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=1"></span>1 word n-grams</a>
       <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=10"></span>10 words n-grams</a>
       <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=11"></span>11 words n-grams</a>
       <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=12"></span>12 words n-grams</a>
@@ -77,10 +77,10 @@ Seq[Any](format.raw/*1.31*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 05 05:38:53 UTC 2016
+                  DATE: Sun Jun 05 05:39:15 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
-                  HASH: 970d69fb7125e058bc9fb44ab86e20be4b72b313
-                  MATRIX: 552->1|676->30|704->33|742->63|781->65|809->67|1930->1161|1974->1189|2014->1191|2047->1197|2105->1228|2131->1233|2161->1236|2187->1241|2228->1255|2253->1259|2300->1276|2330->1279
+                  HASH: 38bcac86286a9d402b9196623840bc13a0091d4a
+                  MATRIX: 552->1|676->30|704->33|742->63|781->65|809->67|1929->1160|1973->1188|2013->1190|2046->1196|2104->1227|2130->1232|2160->1235|2186->1240|2227->1254|2252->1258|2299->1275|2329->1278
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|54->30|54->30|54->30|55->31|55->31|55->31|55->31|55->31|55->31|55->31|56->32|57->33
                   -- GENERATED --
               */
