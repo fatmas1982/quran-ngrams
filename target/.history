@@ -4,3 +4,6 @@ exit
 ~compile
 exit
 ~compile
+~compile stage
+compile stage
+~compile

@@ -37,7 +37,7 @@ object Application extends Controller {
     .map{case(ngram, occurrences) => (ngram, occurrences.length)}
     .filter{case(ngram, occurrences) => occurrences > occuranceThreshold }
     .toList
-    .sortBy{case(ngram, occurrences) => occurrences}
+    .sortBy{case(ngram, occurrences) => occurrences}.reverse
 
     if (numOfWords==1) {
       m.filterNot{case(ngram, repeat) => stopWords contains ngram}
