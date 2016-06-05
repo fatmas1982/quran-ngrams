@@ -22,39 +22,45 @@ class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
       {
 
 
-Seq[Any](format.raw/*1.31*/("""
+Seq[Any](format.raw/*1.31*/(""" """),_display_(/*1.33*/main("Quran N-gram Analytics")/*1.63*/ {_display_(Seq[Any](format.raw/*1.65*/("""
 
-"""),_display_(/*3.2*/main("Quran N-gram Analytics")/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
+"""),format.raw/*3.1*/("""<div class="jumbotron text-center">
+    <div class="container">
 
-"""),format.raw/*5.1*/("""<div class="jumbotron text-center">
-  <div class="container">
+        <p class="text-right">
+            <a class="github-button" href="https://github.com/saqib-ali/quran-ngrams" data-style="mega" data-count-href="/saqib-ali/quran-ngrams/stargazers" data-count-api="/repos/saqib-ali/quran-ngrams#stargazers_count" data-count-aria-label="# stargazers on GitHub"
+            aria-label="Star saqib-ali/quran-ngrams on GitHub">Star</a>
+        </p>
 
-    <h1>Quran N-gram Analytics</h1>
-    <p>This Scala app lets you perform n-gram Analytics on the English Translation of Quran</p>
+        <h1>Quran N-gram Analytics</h1>
+        <p>This Scala app lets you perform n-gram Analytics on the English Translation of Quran</p>
 
 
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=1"></span>1 word n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=10"></span>10 words n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=11"></span>11 words n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=12"></span>12 words n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=13"></span>13 words n-grams</a>
-      <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=14"></span>14 words n-grams</a>
-   
- </div>
+        <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=1"></span>1 word n-grams</a>
+        <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=10"></span>10 words n-grams</a>
+        <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=11"></span>11 words n-grams</a>
+        <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=12"></span>12 words n-grams</a>
+        <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=13"></span>13 words n-grams</a>
+        <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=14"></span>14 words n-grams</a>
+
+    </div>
 
 </div>
 <div class="container">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>N-gram</th>
-                    <th>Repeated</th>
-                </tr>
-                </thead>
-            """),_display_(/*30.14*/for((ngram, freq) <- ngrams) yield /*30.42*/ {_display_(Seq[Any](format.raw/*30.44*/("""
-     """),format.raw/*31.6*/("""<tr><td><a href="search?ngram="""),_display_(/*31.37*/ngram),format.raw/*31.42*/("""">"""),_display_(/*31.45*/ngram),format.raw/*31.50*/("""</a></td><td>"""),_display_(/*31.64*/freq),format.raw/*31.68*/("""</td></tr>
-     """)))}),format.raw/*32.7*/("""
-  """),format.raw/*33.3*/("""</table>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>N-gram</th>
+                <th>Repeated</th>
+            </tr>
+        </thead>
+        """),_display_(/*33.10*/for((ngram, freq)
+        <- ngrams) yield /*34.19*/ {_display_(Seq[Any](format.raw/*34.21*/(""" """),format.raw/*34.22*/("""<tr>
+            <td><a href="search?ngram="""),_display_(/*35.40*/ngram),format.raw/*35.45*/("""">"""),_display_(/*35.48*/ngram),format.raw/*35.53*/("""</a></td>
+            <td>"""),_display_(/*36.18*/freq),format.raw/*36.22*/("""</td>
+            </tr>
+            """)))}),format.raw/*38.14*/("""
+    """),format.raw/*39.5*/("""</table>
 </div>
 
 """)))}))
@@ -77,11 +83,11 @@ Seq[Any](format.raw/*1.31*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 05 05:39:15 UTC 2016
+                  DATE: Sun Jun 05 17:58:25 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
-                  HASH: 38bcac86286a9d402b9196623840bc13a0091d4a
-                  MATRIX: 552->1|676->30|704->33|742->63|781->65|809->67|1929->1160|1973->1188|2013->1190|2046->1196|2104->1227|2130->1232|2160->1235|2186->1240|2227->1254|2252->1258|2299->1275|2329->1278
-                  LINES: 20->1|25->1|27->3|27->3|27->3|29->5|54->30|54->30|54->30|55->31|55->31|55->31|55->31|55->31|55->31|55->31|56->32|57->33
+                  HASH: c26b4da67053e43fa546d28db54b53af02ae886c
+                  MATRIX: 552->1|676->30|704->32|742->62|781->64|809->66|2292->1522|2344->1558|2384->1560|2413->1561|2484->1605|2510->1610|2540->1613|2566->1618|2620->1645|2645->1649|2713->1686|2745->1691
+                  LINES: 20->1|25->1|25->1|25->1|25->1|27->3|57->33|58->34|58->34|58->34|59->35|59->35|59->35|59->35|60->36|60->36|62->38|63->39
                   -- GENERATED --
               */
           
