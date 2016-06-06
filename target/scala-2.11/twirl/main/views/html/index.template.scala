@@ -14,17 +14,19 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[List[scala.Tuple2[String, Int]],play.twirl.api.HtmlFormat.Appendable] {
+class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[scala.Tuple2[String, Int]],Int,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(ngrams: List[(String, Int)]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(ngrams: List[(String, Int)], numOfWordsInt: Int):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.31*/(""" """),_display_(/*1.33*/main("Quran N-gram Analytics")/*1.63*/ {_display_(Seq[Any](format.raw/*1.65*/("""
+Seq[Any](format.raw/*1.51*/(""" 
 
-"""),format.raw/*3.1*/("""<div class="jumbotron text-center">
+"""),_display_(/*3.2*/main("Quran N-gram Analytics")/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
+
+"""),format.raw/*5.1*/("""<div class="jumbotron text-center">
     <div class="container">
 
         <p class="text-right">
@@ -53,13 +55,13 @@ Seq[Any](format.raw/*1.31*/(""" """),_display_(/*1.33*/main("Quran N-gram Analyt
                 <th>Repeated</th>
             </tr>
         </thead>
-        """),_display_(/*32.10*/for((ngram, freq)
-        <- ngrams) yield /*33.19*/ {_display_(Seq[Any](format.raw/*33.21*/(""" """),format.raw/*33.22*/("""<tr>
-            <td><a href="search?ngram="""),_display_(/*34.40*/ngram),format.raw/*34.45*/("""">"""),_display_(/*34.48*/ngram),format.raw/*34.53*/("""</a></td>
-            <td>"""),_display_(/*35.18*/freq),format.raw/*35.22*/("""</td>
+        """),_display_(/*34.10*/for((ngram, freq)
+        <- ngrams) yield /*35.19*/ {_display_(Seq[Any](format.raw/*35.21*/(""" """),format.raw/*35.22*/("""<tr>
+            <td><a href="search?ngram="""),_display_(/*36.40*/ngram),format.raw/*36.45*/("""">"""),_display_(/*36.48*/ngram),format.raw/*36.53*/("""</a></td>
+            <td>"""),_display_(/*37.18*/freq),format.raw/*37.22*/("""</td>
             </tr>
-            """)))}),format.raw/*37.14*/("""
-    """),format.raw/*38.5*/("""</table>
+            """)))}),format.raw/*39.14*/("""
+    """),format.raw/*40.5*/("""</table>
 </div>
 
 """)))}))
@@ -67,9 +69,9 @@ Seq[Any](format.raw/*1.31*/(""" """),_display_(/*1.33*/main("Quran N-gram Analyt
     }
   }
 
-  def render(ngrams:List[scala.Tuple2[String, Int]]): play.twirl.api.HtmlFormat.Appendable = apply(ngrams)
+  def render(ngrams:List[scala.Tuple2[String, Int]],numOfWordsInt:Int): play.twirl.api.HtmlFormat.Appendable = apply(ngrams,numOfWordsInt)
 
-  def f:((List[scala.Tuple2[String, Int]]) => play.twirl.api.HtmlFormat.Appendable) = (ngrams) => apply(ngrams)
+  def f:((List[scala.Tuple2[String, Int]],Int) => play.twirl.api.HtmlFormat.Appendable) = (ngrams,numOfWordsInt) => apply(ngrams,numOfWordsInt)
 
   def ref: this.type = this
 
@@ -82,11 +84,11 @@ Seq[Any](format.raw/*1.31*/(""" """),_display_(/*1.33*/main("Quran N-gram Analyt
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Mon Jun 06 00:25:43 UTC 2016
+                  DATE: Mon Jun 06 04:06:04 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
-                  HASH: 66388f6278749d1fc057ca21e0300698930bfc7c
-                  MATRIX: 552->1|676->30|704->32|742->62|781->64|809->66|2188->1418|2240->1454|2280->1456|2309->1457|2380->1501|2406->1506|2436->1509|2462->1514|2516->1541|2541->1545|2609->1582|2641->1587
-                  LINES: 20->1|25->1|25->1|25->1|25->1|27->3|56->32|57->33|57->33|57->33|58->34|58->34|58->34|58->34|59->35|59->35|61->37|62->38
+                  HASH: 36b59bccfe0eb4de8c82f7eb69610fe5dfd949fe
+                  MATRIX: 556->1|700->50|729->54|767->84|806->86|834->88|2213->1440|2265->1476|2305->1478|2334->1479|2405->1523|2431->1528|2461->1531|2487->1536|2541->1563|2566->1567|2634->1604|2666->1609
+                  LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|60->36|60->36|61->37|61->37|63->39|64->40
                   -- GENERATED --
               */
           

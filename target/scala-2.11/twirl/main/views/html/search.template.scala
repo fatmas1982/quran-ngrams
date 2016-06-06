@@ -92,7 +92,7 @@ Seq[Any](format.raw/*1.38*/(""" """),_display_(/*1.40*/main("Quran verses contai
 object search extends search_Scope0.search
               /*
                   -- GENERATED --
-                  DATE: Mon Jun 06 00:26:02 UTC 2016
+                  DATE: Mon Jun 06 04:02:51 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/search.scala.html
                   HASH: eccc5d3a5cb8cc35020d69b51c1c58c8511a5d68
                   MATRIX: 542->1|673->37|701->39|750->80|789->82|817->84|2085->1326|2111->1343|2150->1344|2182->1349|2296->1436|2322->1441|2354->1446|2396->1458|2429->1464|2598->1606|2642->1634|2682->1636|2711->1637|2760->1659|2785->1663|2853->1700|2885->1705
