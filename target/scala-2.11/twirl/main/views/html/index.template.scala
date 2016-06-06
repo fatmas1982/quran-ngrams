@@ -24,7 +24,7 @@ class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
 
 Seq[Any](format.raw/*1.48*/(""" 
 
-"""),_display_(/*3.2*/main("Quran N-gram Analytics: " + numOfWords + " word N-grams")/*3.65*/ {_display_(Seq[Any](format.raw/*3.67*/("""
+"""),_display_(/*3.2*/main("Quran Analysis: " + numOfWords + " word N-grams in Quran")/*3.66*/ {_display_(Seq[Any](format.raw/*3.68*/("""
 
 """),format.raw/*5.1*/("""<div class="jumbotron text-center">
     <div class="container">
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*1.48*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Mon Jun 06 04:08:46 UTC 2016
+                  DATE: Mon Jun 06 04:15:49 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
-                  HASH: bf56c4aabf65caec240c9cde7e6a63cc9a1f2032
-                  MATRIX: 556->1|697->47|726->51|797->114|836->116|864->118|2243->1470|2295->1506|2335->1508|2364->1509|2435->1553|2461->1558|2491->1561|2517->1566|2571->1593|2596->1597|2664->1634|2696->1639
+                  HASH: 5b19aed3786ec08e8e5606608dd05e2a49c963c6
+                  MATRIX: 556->1|697->47|726->51|798->115|837->117|865->119|2244->1471|2296->1507|2336->1509|2365->1510|2436->1554|2462->1559|2492->1562|2518->1567|2572->1594|2597->1598|2665->1635|2697->1640
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|60->36|60->36|61->37|61->37|63->39|64->40
                   -- GENERATED --
               */

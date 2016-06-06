@@ -38,8 +38,6 @@ object Application extends Controller {
     val numOfWords = 1;
     val ngrams = generateNGram(numOfWords)
     ngrams.foreach{case (ngram, freq) => println(ngram+" "+freq)}
-    //val searchResults = generateSearchResults("Resurrection")
-    //searchResults.foreach(println)
 
   }
     
