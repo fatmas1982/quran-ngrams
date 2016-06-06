@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Sun Jun 05 23:59:01 UTC 2016
+// @DATE:Mon Jun 06 00:03:31 UTC 2016
 
 package router
 
@@ -39,7 +39,7 @@ class Routes extends GeneratedRouter {
   def documentation: Seq[(String, String, String)] = List(
     ("""GET""", prefix, """controllers.Application.index(numOfWords:Option[Int])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """search""", """controllers.Application.search(ngram:Option[String])"""),
-    ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signs""", """controllers.Application.search(numOfSigns:Option[String])"""),
+    ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signs""", """controllers.Application.signs(numOfSigns:Option[Int])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -83,16 +83,16 @@ class Routes extends GeneratedRouter {
   )
 
   // @LINE:8
-  private[this] lazy val controllers_Application_search2_route: Route.ParamsExtractor = Route("GET",
+  private[this] lazy val controllers_Application_signs2_route: Route.ParamsExtractor = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signs")))
   )
-  private[this] lazy val controllers_Application_search2_invoker = createInvoker(
-    controllers.Application.search(fakeValue[Option[String]]),
+  private[this] lazy val controllers_Application_signs2_invoker = createInvoker(
+    controllers.Application.signs(fakeValue[Option[Int]]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "search",
-      Seq(classOf[Option[String]]),
+      "signs",
+      Seq(classOf[Option[Int]]),
       "GET",
       """""",
       this.prefix + """signs"""
@@ -132,9 +132,9 @@ class Routes extends GeneratedRouter {
       }
   
     // @LINE:8
-    case controllers_Application_search2_route(params) =>
-      call(params.fromQuery[Option[String]]("numOfSigns", None)) { (numOfSigns) =>
-        controllers_Application_search2_invoker.call(controllers.Application.search(numOfSigns))
+    case controllers_Application_signs2_route(params) =>
+      call(params.fromQuery[Option[Int]]("numOfSigns", None)) { (numOfSigns) =>
+        controllers_Application_signs2_invoker.call(controllers.Application.signs(numOfSigns))
       }
   
     // @LINE:13

@@ -14,6 +14,7 @@
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/app/Global.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/app/controllers/Application.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/app/controllers/Quran.scala[0m
+[0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/app/controllers/StopWords.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/target/scala-2.11/routes/main/controllers/routes.java[0m
@@ -22,6 +23,6 @@
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/target/scala-2.11/twirl/main/views/html/index.template.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/target/scala-2.11/twirl/main/views/html/main.template.scala[0m
 [0m[[0mdebug[0m] [0m	/home/ubuntu/workspace/target/scala-2.11/twirl/main/views/html/search.template.scala[0m
-[0m[[33mwarn[0m] [0mthere were two feature warnings; re-run with -feature for details[0m
+[0m[[33mwarn[0m] [0mthere were three feature warnings; re-run with -feature for details[0m
 [0m[[33mwarn[0m] [0mone warning found[0m
 [0m[[0minfo[0m] [0mMain Scala API documentation successful.[0m

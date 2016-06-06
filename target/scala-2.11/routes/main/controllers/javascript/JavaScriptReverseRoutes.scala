@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Sun Jun 05 23:59:01 UTC 2016
+// @DATE:Mon Jun 06 00:03:31 UTC 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -42,16 +42,22 @@ package controllers.javascript {
     }
 
   
+    // @LINE:8
+    def signs: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.signs",
+      """
+        function(numOfSigns) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signs" + _qS([(""" + implicitly[QueryStringBindable[Option[Int]]].javascriptUnbind + """)("numOfSigns", numOfSigns)])})
+        }
+      """
+    )
+  
     // @LINE:7
     def search: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.search",
       """
         function(ngram) {
-        
-          if (true) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search" + _qS([(""" + implicitly[QueryStringBindable[Option[String]]].javascriptUnbind + """)("ngram", ngram)])})
-          }
-        
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search" + _qS([(""" + implicitly[QueryStringBindable[Option[String]]].javascriptUnbind + """)("ngram", ngram)])})
         }
       """
     )

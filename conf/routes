@@ -5,7 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index(numOfWords: Option[Int])
 GET     /search                           controllers.Application.search(ngram: Option[String])
-GET     /signs                           controllers.Application.search(numOfSigns: Option[Int])
+GET     /signs                           controllers.Application.signs(numOfSigns: Option[Int])
 
 
 

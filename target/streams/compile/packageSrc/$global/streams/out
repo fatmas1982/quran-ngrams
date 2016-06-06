@@ -1,1 +1,15 @@
-[0m[[0mdebug[0m] [0mJar uptodate: /home/ubuntu/workspace/target/scala-2.11/quran-ngrams_2.11-1.0-SNAPSHOT-sources.jar[0m
+[0m[[0minfo[0m] [0mPackaging /home/ubuntu/workspace/target/scala-2.11/quran-ngrams_2.11-1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	controllers/Quran.scala[0m
+[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/app/controllers/Quran.scala[0m
+[0m[[0mdebug[0m] [0m	Global.scala[0m
+[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/app/Global.scala[0m
+[0m[[0mdebug[0m] [0m	routes[0m
+[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/conf/routes[0m
+[0m[[0mdebug[0m] [0m	application.conf[0m
+[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/conf/application.conf[0m
+[0m[[0mdebug[0m] [0m	controllers/StopWords.scala[0m
+[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/app/controllers/StopWords.scala[0m
+[0m[[0mdebug[0m] [0m	controllers/Application.scala[0m
+[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/app/controllers/Application.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

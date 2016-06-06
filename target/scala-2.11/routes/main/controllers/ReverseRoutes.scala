@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Sun Jun 05 23:59:01 UTC 2016
+// @DATE:Mon Jun 06 00:03:31 UTC 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -34,18 +34,16 @@ package controllers {
     }
 
   
+    // @LINE:8
+    def signs(numOfSigns:Option[Int]): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "signs" + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("numOfSigns", numOfSigns)))))
+    }
+  
     // @LINE:7
     def search(ngram:Option[String]): Call = {
-    
-      (ngram: @unchecked) match {
-      
-        // @LINE:7
-        case (ngram)  =>
-          import ReverseRouteContext.empty
-          Call("GET", _prefix + { _defaultPrefix } + "search" + queryString(List(Some(implicitly[QueryStringBindable[Option[String]]].unbind("ngram", ngram)))))
-      
-      }
-    
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "search" + queryString(List(Some(implicitly[QueryStringBindable[Option[String]]].unbind("ngram", ngram)))))
     }
   
     // @LINE:6
