@@ -12,7 +12,7 @@ object Application extends Controller {
 
     val signs = new Quran signs
 
-    val m = (for( i <- 0 to signs.length-1) yield  signs(i)
+      (for( i <- 0 to signs.length-1) yield signs(i)
       .split(" ")
       .sliding(numOfWords)
       .toList
@@ -21,7 +21,7 @@ object Application extends Controller {
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
        .filter{case(ngram, occurrences) => occurrences > 2 }
-    m
+    
 
     
   }
@@ -51,8 +51,6 @@ object Application extends Controller {
 
   def search(ngram: Option[String]) = Action {
     val ngramString : String = ngram.getOrElse("")
-    
-
     Ok(views.html.search(generateSearchResults(ngramString), ngramString))
   }
 }
