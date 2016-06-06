@@ -55,7 +55,7 @@ def generateSignsNGram(numOfSignsInput: Int): List[(String, Int)] = {
 
     val signs = new Quran signs
 
-    val m = (for( i <- 2 to 20) yield  signs(i).split(" ").sliding(numOfSignsInput)
+    val m = (for( i <- 2 to signs.length) yield  signs(i).split(" ").sliding(numOfSignsInput)
       .toList
       .map(_.mkString(" "))
       )
