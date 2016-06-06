@@ -4,7 +4,6 @@ package controllers
 class Quran{
 
  var signs = Array(
-"In the name of Allah, the Beneficent, the Merciful." ,
 "Praise be to Allah, Lord of the Worlds," ,
 "The Beneficent, the Merciful." ,
 "Master of the Day of Judgment," ,
