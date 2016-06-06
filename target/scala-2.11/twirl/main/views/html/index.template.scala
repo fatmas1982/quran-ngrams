@@ -17,14 +17,14 @@ import play.api.data._
 class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[scala.Tuple2[String, Int]],Int,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(ngrams: List[(String, Int)], numOfWordsInt: Int):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(ngrams: List[(String, Int)], numOfWords: Int):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.51*/(""" 
+Seq[Any](format.raw/*1.48*/(""" 
 
-"""),_display_(/*3.2*/main("Quran N-gram Analytics")/*3.32*/ {_display_(Seq[Any](format.raw/*3.34*/("""
+"""),_display_(/*3.2*/main("Quran N-gram Analytics: " + numOfWords + " word N-grams")/*3.65*/ {_display_(Seq[Any](format.raw/*3.67*/("""
 
 """),format.raw/*5.1*/("""<div class="jumbotron text-center">
     <div class="container">
@@ -69,9 +69,9 @@ Seq[Any](format.raw/*1.51*/("""
     }
   }
 
-  def render(ngrams:List[scala.Tuple2[String, Int]],numOfWordsInt:Int): play.twirl.api.HtmlFormat.Appendable = apply(ngrams,numOfWordsInt)
+  def render(ngrams:List[scala.Tuple2[String, Int]],numOfWords:Int): play.twirl.api.HtmlFormat.Appendable = apply(ngrams,numOfWords)
 
-  def f:((List[scala.Tuple2[String, Int]],Int) => play.twirl.api.HtmlFormat.Appendable) = (ngrams,numOfWordsInt) => apply(ngrams,numOfWordsInt)
+  def f:((List[scala.Tuple2[String, Int]],Int) => play.twirl.api.HtmlFormat.Appendable) = (ngrams,numOfWords) => apply(ngrams,numOfWords)
 
   def ref: this.type = this
 
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*1.51*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Mon Jun 06 04:06:04 UTC 2016
+                  DATE: Mon Jun 06 04:08:46 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
-                  HASH: 36b59bccfe0eb4de8c82f7eb69610fe5dfd949fe
-                  MATRIX: 556->1|700->50|729->54|767->84|806->86|834->88|2213->1440|2265->1476|2305->1478|2334->1479|2405->1523|2431->1528|2461->1531|2487->1536|2541->1563|2566->1567|2634->1604|2666->1609
+                  HASH: bf56c4aabf65caec240c9cde7e6a63cc9a1f2032
+                  MATRIX: 556->1|697->47|726->51|797->114|836->116|864->118|2243->1470|2295->1506|2335->1508|2364->1509|2435->1553|2461->1558|2491->1561|2517->1566|2571->1593|2596->1597|2664->1634|2696->1639
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|60->36|60->36|61->37|61->37|63->39|64->40
                   -- GENERATED --
               */

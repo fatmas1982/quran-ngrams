@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Mon Jun 06 00:03:31 UTC 2016
+// @DATE:Mon Jun 06 04:12:29 UTC 2016
 
 package router
 
@@ -39,7 +39,6 @@ class Routes extends GeneratedRouter {
   def documentation: Seq[(String, String, String)] = List(
     ("""GET""", prefix, """controllers.Application.index(numOfWords:Option[Int])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """search""", """controllers.Application.search(ngram:Option[String])"""),
-    ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signs""", """controllers.Application.signs(numOfSigns:Option[Int])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -82,28 +81,11 @@ class Routes extends GeneratedRouter {
     )
   )
 
-  // @LINE:8
-  private[this] lazy val controllers_Application_signs2_route: Route.ParamsExtractor = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signs")))
-  )
-  private[this] lazy val controllers_Application_signs2_invoker = createInvoker(
-    controllers.Application.signs(fakeValue[Option[Int]]),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Application",
-      "signs",
-      Seq(classOf[Option[Int]]),
-      "GET",
-      """""",
-      this.prefix + """signs"""
-    )
-  )
-
   // @LINE:13
-  private[this] lazy val controllers_Assets_at3_route: Route.ParamsExtractor = Route("GET",
+  private[this] lazy val controllers_Assets_at2_route: Route.ParamsExtractor = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at3_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at2_invoker = createInvoker(
     controllers.Assets.at(fakeValue[String], fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -131,16 +113,10 @@ class Routes extends GeneratedRouter {
         controllers_Application_search1_invoker.call(controllers.Application.search(ngram))
       }
   
-    // @LINE:8
-    case controllers_Application_signs2_route(params) =>
-      call(params.fromQuery[Option[Int]]("numOfSigns", None)) { (numOfSigns) =>
-        controllers_Application_signs2_invoker.call(controllers.Application.signs(numOfSigns))
-      }
-  
     // @LINE:13
-    case controllers_Assets_at3_route(params) =>
+    case controllers_Assets_at2_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at3_invoker.call(controllers.Assets.at(path, file))
+        controllers_Assets_at2_invoker.call(controllers.Assets.at(path, file))
       }
   }
 }

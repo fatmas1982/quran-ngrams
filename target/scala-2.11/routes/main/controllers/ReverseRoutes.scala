@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Mon Jun 06 00:03:31 UTC 2016
+// @DATE:Mon Jun 06 04:12:29 UTC 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -33,12 +33,6 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
-  
-    // @LINE:8
-    def signs(numOfSigns:Option[Int]): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "signs" + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("numOfSigns", numOfSigns)))))
-    }
   
     // @LINE:7
     def search(ngram:Option[String]): Call = {
