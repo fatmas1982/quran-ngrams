@@ -55,14 +55,15 @@ def generateSignsNGram(numOfSignsInput: Int): List[(String, Int)] = {
 
     val signs = new Quran signs
 
-    val m = (for( i <- 2 to signs.length) yield  signs(i).split(" ").sliding(numOfSignsInput)
+    val m = (for( i <- 0 to signs.length-1) yield  signs(i)
+      .split(" ")
+      .sliding(2)
       .toList
       .map(_.mkString(" "))
-      )
-      .groupBy(x => x)
-      .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-      .filter{case(ngram, occurrences) => occurrences > 1 }
-      .toList
+      ).flatten.toList.groupBy(x => x)   
+       .toList   
+       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .filter{case(ngram, occurrences) => occurrences >1 }
       
       
      m
