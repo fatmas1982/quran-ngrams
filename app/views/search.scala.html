@@ -1,4 +1,4 @@
-@(signs: List[String], ngram: String) @main("Quran verses containing: " + ngram) {
+@(signs: List[List[String]], ngram: String) @main("Quran verses containing: " + ngram) {
 
 <!-- Place this tag where you want the button to render. -->
 
@@ -42,7 +42,10 @@
         </thead>
         @for((sign)
         <- signs) { <tr>
-            <td>@sign</td>
+            <td>@sign(2)</td>
+            <td>@sign(0)</td>
+            <td>@sign(1)</td>
+            <td>@sign(3)</td>
             </tr>
             }
     </table>

@@ -7,3 +7,7 @@ exit
 ~compile stage
 compile stage
 ~compile
+console
+~compile
+quit
+exit

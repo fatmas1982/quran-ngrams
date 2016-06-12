@@ -12,7 +12,7 @@ object Application extends Controller {
 
     val signs = new Quran signs
 
-      (for( i <- 0 to signs.length-1) yield signs(i)
+    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
       .sliding(numOfWords)
       .toList
@@ -21,16 +21,14 @@ object Application extends Controller {
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
        .filter{case(ngram, occurrences) => occurrences > 2 }
-    
-
-    
   }
 
 
-  def generateSearchResults(ngram: String): List[(String)] = {
-    val signs = new Quran signs
-    val signsList = signs.toList
-    signsList.filter(_.contains(ngram))
+  def generateSearchResults(ngram: String): List[List[String]] = {
+    val signs = new QuranWithAya getSignsWithSurahNames
+    
+    signs.filter(_(2).contains(ngram))
+    
   }
 
 

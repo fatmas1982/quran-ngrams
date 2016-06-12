@@ -3,7 +3,7 @@ package controllers
 
 class Quran{
 
- var signs = Array(
+var signs = Array(
 "Praise be to Allah, Lord of the Worlds," ,
 "The Beneficent, the Merciful." ,
 "Master of the Day of Judgment," ,

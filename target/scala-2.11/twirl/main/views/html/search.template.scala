@@ -14,15 +14,15 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-class search extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[String],String,play.twirl.api.HtmlFormat.Appendable] {
+class search extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[List[String]],String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(signs: List[String], ngram: String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(signs: List[List[String]], ngram: String):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.38*/(""" """),_display_(/*1.40*/main("Quran verses containing: " + ngram)/*1.81*/ {_display_(Seq[Any](format.raw/*1.83*/("""
+Seq[Any](format.raw/*1.44*/(""" """),_display_(/*1.46*/main("Quran verses containing: " + ngram)/*1.87*/ {_display_(Seq[Any](format.raw/*1.89*/("""
 
 """),format.raw/*3.1*/("""<!-- Place this tag where you want the button to render. -->
 
@@ -66,10 +66,13 @@ Seq[Any](format.raw/*1.38*/(""" """),_display_(/*1.40*/main("Quran verses contai
         </thead>
         """),_display_(/*43.10*/for((sign)
         <- signs) yield /*44.18*/ {_display_(Seq[Any](format.raw/*44.20*/(""" """),format.raw/*44.21*/("""<tr>
-            <td>"""),_display_(/*45.18*/sign),format.raw/*45.22*/("""</td>
+            <td>"""),_display_(/*45.18*/sign(2)),format.raw/*45.25*/("""</td>
+            <td>"""),_display_(/*46.18*/sign(0)),format.raw/*46.25*/("""</td>
+            <td>"""),_display_(/*47.18*/sign(1)),format.raw/*47.25*/("""</td>
+            <td>"""),_display_(/*48.18*/sign(3)),format.raw/*48.25*/("""</td>
             </tr>
-            """)))}),format.raw/*47.14*/("""
-    """),format.raw/*48.5*/("""</table>
+            """)))}),format.raw/*50.14*/("""
+    """),format.raw/*51.5*/("""</table>
 </div>
 
 """)))}))
@@ -77,9 +80,9 @@ Seq[Any](format.raw/*1.38*/(""" """),_display_(/*1.40*/main("Quran verses contai
     }
   }
 
-  def render(signs:List[String],ngram:String): play.twirl.api.HtmlFormat.Appendable = apply(signs,ngram)
+  def render(signs:List[List[String]],ngram:String): play.twirl.api.HtmlFormat.Appendable = apply(signs,ngram)
 
-  def f:((List[String],String) => play.twirl.api.HtmlFormat.Appendable) = (signs,ngram) => apply(signs,ngram)
+  def f:((List[List[String]],String) => play.twirl.api.HtmlFormat.Appendable) = (signs,ngram) => apply(signs,ngram)
 
   def ref: this.type = this
 
@@ -92,11 +95,11 @@ Seq[Any](format.raw/*1.38*/(""" """),_display_(/*1.40*/main("Quran verses contai
 object search extends search_Scope0.search
               /*
                   -- GENERATED --
-                  DATE: Mon Jun 06 04:02:51 UTC 2016
+                  DATE: Sun Jun 12 12:51:54 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/search.scala.html
-                  HASH: eccc5d3a5cb8cc35020d69b51c1c58c8511a5d68
-                  MATRIX: 542->1|673->37|701->39|750->80|789->82|817->84|2085->1326|2111->1343|2150->1344|2182->1349|2296->1436|2322->1441|2354->1446|2396->1458|2429->1464|2598->1606|2642->1634|2682->1636|2711->1637|2760->1659|2785->1663|2853->1700|2885->1705
-                  LINES: 20->1|25->1|25->1|25->1|25->1|27->3|55->31|55->31|55->31|56->32|57->33|57->33|58->34|59->35|61->37|67->43|68->44|68->44|68->44|69->45|69->45|71->47|72->48
+                  HASH: 6c1420f9bdf108906c692510a75d10ba50386f0d
+                  MATRIX: 548->1|685->43|713->45|762->86|801->88|829->90|2097->1332|2123->1349|2162->1350|2194->1355|2308->1442|2334->1447|2366->1452|2408->1464|2441->1470|2610->1612|2654->1640|2694->1642|2723->1643|2772->1665|2800->1672|2850->1695|2878->1702|2928->1725|2956->1732|3006->1755|3034->1762|3102->1799|3134->1804
+                  LINES: 20->1|25->1|25->1|25->1|25->1|27->3|55->31|55->31|55->31|56->32|57->33|57->33|58->34|59->35|61->37|67->43|68->44|68->44|68->44|69->45|69->45|70->46|70->46|71->47|71->47|72->48|72->48|74->50|75->51
                   -- GENERATED --
               */
           
