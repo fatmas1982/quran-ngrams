@@ -11,3 +11,5 @@ console
 ~compile
 quit
 exit
+~compile
+exit
