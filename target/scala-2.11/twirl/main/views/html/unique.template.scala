@@ -14,15 +14,15 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-class unique extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[String],Int,play.twirl.api.HtmlFormat.Appendable] {
+class unique extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[scala.Tuple2[String, Int]],Int,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(ngrams: List[(String)], numOfWords: Int):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(ngrams: List[(String, Int)], numOfWords: Int):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.43*/(""" 
+Seq[Any](format.raw/*1.48*/(""" 
 
 """),_display_(/*3.2*/main("Quran Analysis: " + numOfWords + " word N-grams in Quran")/*3.66*/ {_display_(Seq[Any](format.raw/*3.68*/("""
 
@@ -69,9 +69,9 @@ Seq[Any](format.raw/*1.43*/("""
     }
   }
 
-  def render(ngrams:List[String],numOfWords:Int): play.twirl.api.HtmlFormat.Appendable = apply(ngrams,numOfWords)
+  def render(ngrams:List[scala.Tuple2[String, Int]],numOfWords:Int): play.twirl.api.HtmlFormat.Appendable = apply(ngrams,numOfWords)
 
-  def f:((List[String],Int) => play.twirl.api.HtmlFormat.Appendable) = (ngrams,numOfWords) => apply(ngrams,numOfWords)
+  def f:((List[scala.Tuple2[String, Int]],Int) => play.twirl.api.HtmlFormat.Appendable) = (ngrams,numOfWords) => apply(ngrams,numOfWords)
 
   def ref: this.type = this
 
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*1.43*/("""
 object unique extends unique_Scope0.unique
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 15 02:21:01 UTC 2016
+                  DATE: Wed Jun 15 05:09:23 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/unique.scala.html
-                  HASH: b9cb0ae46061ff0d410b8bac7b216316579d6dde
-                  MATRIX: 539->1|675->42|704->46|776->110|815->112|843->114|2222->1466|2266->1494|2306->1496|2335->1497|2406->1541|2432->1546|2462->1549|2488->1554|2542->1581|2568->1586|2636->1623|2668->1628
+                  HASH: 419f5798ca70450aef8e3d3f5c7f8b7cd0a927f5
+                  MATRIX: 558->1|699->47|728->51|800->115|839->117|867->119|2246->1471|2290->1499|2330->1501|2359->1502|2430->1546|2456->1551|2486->1554|2512->1559|2566->1586|2592->1591|2660->1628|2692->1633
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|60->36|60->36|61->37|61->37|63->39|64->40
                   -- GENERATED --
               */
