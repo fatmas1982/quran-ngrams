@@ -45,15 +45,31 @@ object Application extends Controller {
       Ok(views.html.index(generateNGram(numOfWordsInt), numOfWordsInt))
   }
   
-
-
   def search(ngram: Option[String]) = Action {
     val ngramString : String = ngram.getOrElse("")
     Ok(views.html.search(generateSearchResults(ngramString), ngramString))
   }
+   
+  def unique(numOfWords: Option[Int]) = Action {
+    val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
+      Ok(views.html.unique(generateUniquePhrases(numOfWordsInt), numOfWordsInt))
+  }
   
   
-  
+   
+  def generateUniquePhrases(numOfWords: Int): List[(String)] = {
+
+    val signs = new Quran signs
+
+     (for( i <- 0 to signs.length-1) yield  signs(i)
+      .split(" ")
+      .sliding(numOfWords)
+      .toList
+      .map(_.mkString(" "))
+      ).flatten.toList.distinct
+  }
+   
+   
   /*
   
     (for( i <- 0 to signs.length-1) yield  signs(i)

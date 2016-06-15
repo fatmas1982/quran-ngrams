@@ -17,3 +17,7 @@ exit
 run
 ~compile
 run
+compile stage
+~compile
+clean
+~compile

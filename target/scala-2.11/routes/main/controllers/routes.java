@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Mon Jun 06 04:12:29 UTC 2016
+// @DATE:Wed Jun 15 00:44:09 UTC 2016
 
 package controllers;
 
