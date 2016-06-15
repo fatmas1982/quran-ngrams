@@ -10,7 +10,7 @@ object Application extends Controller {
   
   
   
-  def generateUniquePhrases(numOfWords: Int): List[(String, Int)] = {
+  def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
 
     val signs = new Quran signs
 
