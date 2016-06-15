@@ -14,12 +14,15 @@ object Application extends Controller {
 
     val signs = new Quran signs
 
-     (for( i <- 0 to signs.length-1) yield  signs(i)
+    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
       .sliding(numOfWords)
       .toList
       .map(_.mkString(" "))
-      ).flatten.toList.distinct
+      ).flatten.toList.groupBy(x => x)   
+       .toList   
+       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .filterNot{case(ngram, occurrences) => occurrences > 1 }
   }
    
 
