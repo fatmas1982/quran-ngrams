@@ -66,7 +66,7 @@ object Application extends Controller {
   }
    
   def unique(numOfWords: Option[Int]) = Action {
-    val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 2) 2 else numOfWords.getOrElse(2)
+    val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
       Ok(views.html.unique(generateUniquePhrases(numOfWordsInt), numOfWordsInt))
   }
   
