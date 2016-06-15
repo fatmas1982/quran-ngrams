@@ -22,7 +22,7 @@ object Application extends Controller {
       ).flatten.toList.groupBy(x => x)   
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-       .filterNot{case(ngram, occurrences) => occurrences < 1 }
+       .filterNot{case(ngram, occurrences) => occurrences > 1 }
   }
    
 
