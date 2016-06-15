@@ -33,6 +33,7 @@ object Application extends Controller {
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
       .sliding(numOfWords)
+      .filter(_.size==numOfWords)
       .toList
       .map(_.mkString(" "))
       ).flatten.toList.groupBy(x => x)   
