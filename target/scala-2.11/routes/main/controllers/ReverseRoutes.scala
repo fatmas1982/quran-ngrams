@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Wed Jun 15 00:44:09 UTC 2016
+// @DATE:Wed Jun 15 02:21:00 UTC 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -44,6 +44,12 @@ package controllers {
     def index(numOfWords:Option[Int]): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("numOfWords", numOfWords)))))
+    }
+  
+    // @LINE:8
+    def unique(numOfWords:Option[Int]): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "unique" + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("numOfWords", numOfWords)))))
     }
   
   }

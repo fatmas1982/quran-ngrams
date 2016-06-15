@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Wed Jun 15 00:44:09 UTC 2016
+// @DATE:Wed Jun 15 02:21:00 UTC 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -58,6 +58,16 @@ package controllers.javascript {
       """
         function(numOfWords) {
           return _wA({method:"GET", url:"""" + _prefix + """" + _qS([(""" + implicitly[QueryStringBindable[Option[Int]]].javascriptUnbind + """)("numOfWords", numOfWords)])})
+        }
+      """
+    )
+  
+    // @LINE:8
+    def unique: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.unique",
+      """
+        function(numOfWords) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "unique" + _qS([(""" + implicitly[QueryStringBindable[Option[Int]]].javascriptUnbind + """)("numOfWords", numOfWords)])})
         }
       """
     )

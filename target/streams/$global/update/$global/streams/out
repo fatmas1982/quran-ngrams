@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@145216ea[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@44347b12[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [compile->runtime][0m
@@ -5035,7 +5035,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.ow2.asm#asm-analysis;4.1!asm-analysis.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.ow2.asm#asm-util;4.1!asm-util.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 42594ms :: artifacts dl 1018ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 56833ms :: artifacts dl 949ms[0m
 [0m[[0mdebug[0m] [0m	report for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT compile produced in /home/ubuntu/workspace/target/resolution-cache/reports/quran-ngrams-quran-ngrams_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT runtime produced in /home/ubuntu/workspace/target/resolution-cache/reports/quran-ngrams-quran-ngrams_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT test produced in /home/ubuntu/workspace/target/resolution-cache/reports/quran-ngrams-quran-ngrams_2.11-test.xml[0m
@@ -5049,5 +5049,5 @@
 [0m[[0mdebug[0m] [0m	report for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT docs produced in /home/ubuntu/workspace/target/resolution-cache/reports/quran-ngrams-quran-ngrams_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT pom produced in /home/ubuntu/workspace/target/resolution-cache/reports/quran-ngrams-quran-ngrams_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for quran-ngrams#quran-ngrams_2.11;1.0-SNAPSHOT scala-tool produced in /home/ubuntu/workspace/target/resolution-cache/reports/quran-ngrams-quran-ngrams_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (42594ms resolve - 1018ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (56833ms resolve - 949ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
