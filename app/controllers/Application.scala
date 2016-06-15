@@ -23,7 +23,7 @@ object Application extends Controller {
   }
    
 
-  def generateNGram(numOfWords: Int): List[(String, Int)] = {
+  def generateNGram(numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
 
     val signs = new Quran signs
 
