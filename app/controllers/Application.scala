@@ -51,5 +51,19 @@ object Application extends Controller {
     val ngramString : String = ngram.getOrElse("")
     Ok(views.html.search(generateSearchResults(ngramString), ngramString))
   }
+  
+  
+  
+  /*
+  
+    (for( i <- 0 to signs.length-1) yield  signs(i)
+      .split(" ")
+      .sliding(numOfWords)
+      .toList
+      .map(_.mkString(" "))
+      ).flatten.toList.distinct
+  
+  
+  */
 }
 

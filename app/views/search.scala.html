@@ -40,8 +40,8 @@
                 <th>Verse</th>
             </tr>
         </thead>
-        @for((sign)
-        <- signs) { <tr>
+        @signs.map {sign =>
+            <tr>
             <td>@sign(2) <strong>(@sign(0) : @sign(1) - @sign(3))</strong> </td>
             }
     </table>

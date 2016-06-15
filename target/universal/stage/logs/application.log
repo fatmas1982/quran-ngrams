@@ -20,3 +20,6 @@
 2016-06-05 16:26:52,460 [WARN] from application in main - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
 2016-06-05 16:26:54,041 [INFO] from play.api.Play in main - Application started (Prod)
 2016-06-05 16:26:54,466 [INFO] from play.core.server.NettyServer in main - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2016-06-14 13:20:36,440 [WARN] from application in main - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-14 13:20:37,692 [INFO] from play.api.Play in main - Application started (Prod)
+2016-06-14 13:20:38,066 [INFO] from play.core.server.NettyServer in main - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
