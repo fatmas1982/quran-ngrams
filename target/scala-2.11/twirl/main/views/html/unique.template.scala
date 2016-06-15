@@ -55,7 +55,7 @@ Seq[Any](format.raw/*1.48*/("""
                 <th>Repeated</th>
             </tr>
         </thead>
-        """),_display_(/*34.10*/for(ngram
+        """),_display_(/*34.10*/for((ngram, freq) 
         <- ngrams) yield /*35.19*/ {_display_(Seq[Any](format.raw/*35.21*/(""" """),format.raw/*35.22*/("""<tr>
             <td><a href="search?ngram="""),_display_(/*36.40*/ngram),format.raw/*36.45*/("""">"""),_display_(/*36.48*/ngram),format.raw/*36.53*/("""</a></td>
             <td>"""),_display_(/*37.18*/ngram),format.raw/*37.23*/("""</td>
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*1.48*/("""
 object unique extends unique_Scope0.unique
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 15 05:09:23 UTC 2016
+                  DATE: Wed Jun 15 14:21:43 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/unique.scala.html
-                  HASH: 419f5798ca70450aef8e3d3f5c7f8b7cd0a927f5
-                  MATRIX: 558->1|699->47|728->51|800->115|839->117|867->119|2246->1471|2290->1499|2330->1501|2359->1502|2430->1546|2456->1551|2486->1554|2512->1559|2566->1586|2592->1591|2660->1628|2692->1633
+                  HASH: e3cd3066ec70cd442b4a05b51a976314e51e01f8
+                  MATRIX: 558->1|699->47|728->51|800->115|839->117|867->119|2246->1471|2299->1508|2339->1510|2368->1511|2439->1555|2465->1560|2495->1563|2521->1568|2575->1595|2601->1600|2669->1637|2701->1642
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|60->36|60->36|61->37|61->37|63->39|64->40
                   -- GENERATED --
               */

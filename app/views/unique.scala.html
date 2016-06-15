@@ -31,7 +31,7 @@
                 <th>Repeated</th>
             </tr>
         </thead>
-        @for(ngram
+        @for((ngram, freq) 
         <- ngrams) { <tr>
             <td><a href="search?ngram=@ngram">@ngram</a></td>
             <td>@ngram</td>
