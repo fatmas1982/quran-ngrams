@@ -7,6 +7,21 @@ import play.api.Play.current
 
 
 object Application extends Controller {
+  
+  
+  
+  def generateUniquePhrases(numOfWords: Int): List[(String)] = {
+
+    val signs = new Quran signs
+
+     (for( i <- 0 to signs.length-1) yield  signs(i)
+      .split(" ")
+      .sliding(numOfWords)
+      .toList
+      .map(_.mkString(" "))
+      ).flatten.toList.distinct
+  }
+   
 
   def generateNGram(numOfWords: Int): List[(String, Int)] = {
 
@@ -56,18 +71,6 @@ object Application extends Controller {
   }
   
   
-   
-  def generateUniquePhrases(numOfWords: Int): List[(String)] = {
-
-    val signs = new Quran signs
-
-     (for( i <- 0 to signs.length-1) yield  signs(i)
-      .split(" ")
-      .sliding(numOfWords)
-      .toList
-      .map(_.mkString(" "))
-      ).flatten.toList.distinct
-  }
    
    
   /*
