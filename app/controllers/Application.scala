@@ -11,18 +11,19 @@ object Application extends Controller {
   
   
   def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
+    
+  val punctuationSet = (")(,.").toSet
+  
+  val signs = new Quran signs
 
-    val signs = new Quran signs
-
-    (for( i <- 0 to signs.length-1) yield  signs(i)
+   (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
-      .sliding(numOfWords)
-      .toList
-      .map(_.mkString(" "))
+      .map(x => x.filterNot(punctuationSet.contains(_)))
       ).flatten.toList.groupBy(x => x)   
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
        .filter{case(ngram, occurrences) => occurrences < 2 }
+
   }
    
 
@@ -39,7 +40,7 @@ object Application extends Controller {
       ).flatten.toList.groupBy(x => x)   
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-       .filter{case(ngram, occurrences) => occurrences > 2 }
+       .filter{case(ngram, occurrences) => occurrences > 1 }
   }
 
 
@@ -76,17 +77,6 @@ object Application extends Controller {
   
   
    
-   
-  /*
-  
-    (for( i <- 0 to signs.length-1) yield  signs(i)
-      .split(" ")
-      .sliding(numOfWords)
-      .toList
-      .map(_.mkString(" "))
-      ).flatten.toList.distinct
-  
-  
-  */
+    
 }
 
