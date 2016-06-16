@@ -12,7 +12,7 @@ object Application extends Controller {
   
   def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
     
-  val punctuationSet = (")(,.").toSet
+  val punctuationSet = (")(,.?;!").toSet
   
   val signs = new Quran signs
 
