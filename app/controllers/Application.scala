@@ -19,9 +19,10 @@ object Application extends Controller {
    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
       .map(x => x.filterNot(punctuationSet.contains(_)))
-      ).flatten.toList.groupBy(x => "(?i)"x)   
-       .toList   
+      ).flatten.toList.groupBy(x => x.toLowerCase)   
+       .toList
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .map{case(ngram, occurrences) => (ngram.capitalize, occurrences)}
        .filter{case(ngram, occurrences) => occurrences < 2 }
   }
    
