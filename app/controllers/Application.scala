@@ -4,6 +4,7 @@ import play.api._
 import play.api.mvc._
 import play.api.cache.Cache
 import play.api.Play.current
+import scala.util.matching.Regex.Match
 
 
 object Application extends Controller {
@@ -47,7 +48,7 @@ object Application extends Controller {
   def generateSearchResults(ngram: String): List[List[String]] = {
     val signs = new QuranWithAya getSignsWithSurahNames
     
-    signs.filter(_(2).contains(ngram))
+    signs.filter(_(2).matches(ngram))
     
   }
 
