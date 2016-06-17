@@ -48,8 +48,8 @@ object Application extends Controller {
   def generateSearchResults(ngram: String): List[List[String]] = {
     val signs = new QuranWithAya getSignsWithSurahNames
     
-    signs.filter(_(2).contains(ngram))
-    //signs.filter(_(2).matches("(?i)" + ngram))
+    //signs.filter(_(2).contains(ngram))
+    signs.filter(_(2).matches("(?i:.*" + ngram + ".*)"))
     
   }
 
