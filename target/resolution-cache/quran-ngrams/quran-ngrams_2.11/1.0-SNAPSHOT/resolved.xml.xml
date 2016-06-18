@@ -4,7 +4,7 @@
 		module="quran-ngrams_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160615022100"
+		publication="20160618224010"
 	>
 		<description>
 		quran-ngrams

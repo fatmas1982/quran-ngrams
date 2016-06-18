@@ -5,6 +5,9 @@ import play.api.mvc._
 import play.api.cache.Cache
 import play.api.Play.current
 import scala.util.matching.Regex.Match
+import com.language.processing.service._
+import com.language.processing.data._
+
 
 
 object Application extends Controller {
@@ -15,7 +18,7 @@ object Application extends Controller {
     
   val punctuationSet = (")(,.?;!:").toSet
   
-  val signs = new Quran signs
+  val signs =  new Quran signs
 
    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
@@ -64,7 +67,9 @@ object Application extends Controller {
 
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
-      Ok(views.html.index(generateNGram(numOfWordsInt), numOfWordsInt))
+    val ngram = new Ngram(new Quran)
+    
+    Ok(views.html.index(ngram.generateNGram(numOfWordsInt), numOfWordsInt))
   }
   
   def search(ngram: Option[String]) = Action {
