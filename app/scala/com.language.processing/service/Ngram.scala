@@ -21,5 +21,22 @@ class Ngram(quran: Quran) {
        .filter{case(ngram, occurrences) => occurrences > 1 }
   }
   
+  
+  
+  def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
+    
+  val punctuationSet = (")(,.?;!:").toSet
+  
+  val signs =  new Quran signs
+
+   (for( i <- 0 to signs.length-1) yield  signs(i)
+      .split(" ")
+      .map(x => x.filterNot(punctuationSet.contains(_)))
+      ).flatten.toList.groupBy(x => x.toLowerCase)   
+       .toList
+       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .map{case(ngram, occurrences) => (ngram.capitalize, occurrences)}
+       .filter{case(ngram, occurrences) => occurrences < 2 }
+  }
 
 }

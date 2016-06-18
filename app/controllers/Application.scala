@@ -14,39 +14,8 @@ object Application extends Controller {
   
   
   
-  def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
-    
-  val punctuationSet = (")(,.?;!:").toSet
-  
-  val signs =  new Quran signs
 
-   (for( i <- 0 to signs.length-1) yield  signs(i)
-      .split(" ")
-      .map(x => x.filterNot(punctuationSet.contains(_)))
-      ).flatten.toList.groupBy(x => x.toLowerCase)   
-       .toList
-       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-       .map{case(ngram, occurrences) => (ngram.capitalize, occurrences)}
-       .filter{case(ngram, occurrences) => occurrences < 2 }
-  }
    
-
-  def generateNGram(numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
-
-    val signs = new Quran signs
-
-    (for( i <- 0 to signs.length-1) yield  signs(i)
-      .split(" ")
-      .sliding(numOfWords)
-      .filter(_.size==numOfWords)
-      .toList
-      .map(_.mkString(" "))
-      ).flatten.toList.groupBy(x => x)   
-       .toList   
-       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-       .filter{case(ngram, occurrences) => occurrences > 1 }
-  }
-
 
   def generateSearchResults(ngram: String): List[List[String]] = {
     val signs = new QuranWithAya getSignsWithSurahNames
@@ -59,8 +28,8 @@ object Application extends Controller {
 
   def main(args: Array[String]): Unit = {
     val numOfWords = 1;
-    val ngrams = generateNGram(numOfWords)
-    ngrams.foreach{case (ngram, freq) => println(ngram+" "+freq)}
+   // val ngrams = generateNGram(numOfWords)
+   // ngrams.foreach{case (ngram, freq) => println(ngram+" "+freq)}
 
   }
     
@@ -68,7 +37,6 @@ object Application extends Controller {
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
     val ngram = new Ngram(new Quran)
-    
     Ok(views.html.index(ngram.generateNGram(numOfWordsInt), numOfWordsInt))
   }
   
@@ -79,7 +47,8 @@ object Application extends Controller {
    
   def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-      Ok(views.html.unique(generateUniquePhrases(numOfWordsInt), numOfWordsInt))
+    val ngram = new Ngram(new Quran)
+    Ok(views.html.unique(ngram.generateUniquePhrases(numOfWordsInt), numOfWordsInt))
   }
   
   
