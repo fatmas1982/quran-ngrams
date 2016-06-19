@@ -1,8 +1,7 @@
 package com.language.processing.service
 
-
-
 object NGram {
+  
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
@@ -18,11 +17,9 @@ object NGram {
   
   
   
-    def generateUniquePhrases(signs: List[String], numOfWords: Int = 1): List[(String, Int)] = {
+  def generateUniquePhrases(signs: List[String], numOfWords: Int = 1): List[(String, Int)] = {
     
     val punctuationSet = (")(,.?;!:").toSet
-  
-
    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
       .map(x => x.filterNot(punctuationSet.contains(_)))
