@@ -13,9 +13,6 @@ import com.language.processing.data._
 object Application extends Controller {
   
   
-  
-
-
   def main(args: Array[String]): Unit = {
     val numOfWords = 1;
    // val ngrams = generateNGram(numOfWords)
