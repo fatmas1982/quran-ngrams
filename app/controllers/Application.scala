@@ -15,16 +15,6 @@ object Application extends Controller {
   
   
 
-   
-
-  def generateSearchResults(ngram: String): List[List[String]] = {
-    val signs = new QuranWithAya getSignsWithSurahNames
-    
-    //signs.filter(_(2).contains(ngram))
-    signs.filter(_(2).matches("(?i:.*" + ngram + ".*)"))
-    
-  }
-
 
   def main(args: Array[String]): Unit = {
     val numOfWords = 1;
@@ -36,20 +26,20 @@ object Application extends Controller {
 
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
-    val ngram = new Ngram(new QuranWithAya)
+    val ngram = new Ngram(new Quran)
     
     Ok(views.html.index(ngram.generateNGram(numOfWordsInt), numOfWordsInt))
   }
   
-  def search(ngram: Option[String]) = Action {
-    val ngramString : String = ngram.getOrElse("")
-    Ok(views.html.search(generateSearchResults(ngramString), ngramString))
+  def search(searchText: Option[String]) = Action {
+    val ngramString : String = searchText.getOrElse("")
+    val ngram = new Ngram(new Quran)
+    Ok(views.html.search(ngram.generateSearchResults(ngramString), ngramString))
   }
    
   def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-    val ngram = new Ngram(new QuranWithAya)
-
+    val ngram = new Ngram(new Quran)
     Ok(views.html.unique(ngram.generateUniquePhrases(numOfWordsInt), numOfWordsInt))
   }
   

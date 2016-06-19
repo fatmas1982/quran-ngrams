@@ -3,7 +3,7 @@ package com.language.processing.service
 import com.language.processing.data._
 
 
-class Ngram(quran: QuranWithAya) {
+class Ngram(quran: Quran) {
     
     
     
@@ -41,4 +41,16 @@ class Ngram(quran: QuranWithAya) {
        .filter{case(ngram, occurrences) => occurrences < 2 }
   }
 
+
+
+
+   
+
+  def generateSearchResults(ngram: String): List[List[String]] = {
+    val signs = new Quran getSignsWithSurahNames
+    
+    //signs.filter(_(2).contains(ngram))
+    signs.filter(_(2).matches("(?i:.*" + ngram + ".*)"))
+    
+  }
 }
