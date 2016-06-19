@@ -84,7 +84,7 @@ Seq[Any](format.raw/*1.48*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 19 00:47:41 UTC 2016
+                  DATE: Sun Jun 19 16:26:12 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/index.scala.html
                   HASH: 5b19aed3786ec08e8e5606608dd05e2a49c963c6
                   MATRIX: 556->1|697->47|726->51|798->115|837->117|865->119|2244->1471|2296->1507|2336->1509|2365->1510|2436->1554|2462->1559|2492->1562|2518->1567|2572->1594|2597->1598|2665->1635|2697->1640

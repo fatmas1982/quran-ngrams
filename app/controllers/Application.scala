@@ -23,21 +23,26 @@ object Application extends Controller {
 
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
-    val ngram = new Ngram(new Quran)
+
+    val quran = new Quran
+    val signs = quran.getSignsWithSurahNames.map(_(2))
+
     
-    Ok(views.html.index(ngram.generateNGram(numOfWordsInt), numOfWordsInt))
+    Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
   }
   
   def search(searchText: Option[String]) = Action {
     val ngramString : String = searchText.getOrElse("")
-    val ngram = new Ngram(new Quran)
-    Ok(views.html.search(ngram.generateSearchResults(ngramString), ngramString))
+    val quran = new Quran
+    val signs = quran.getSignsWithSurahNames
+    Ok(views.html.search(NGram.generateSearchResults(signs, ngramString), ngramString))
   }
    
   def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-    val ngram = new Ngram(new Quran)
-    Ok(views.html.unique(ngram.generateUniquePhrases(numOfWordsInt), numOfWordsInt))
+    val quran = new Quran
+    val signs = quran.getSignsWithSurahNames.map(_(2))
+    Ok(views.html.unique(NGram.generateUniquePhrases(signs, numOfWordsInt), numOfWordsInt))
   }
   
   

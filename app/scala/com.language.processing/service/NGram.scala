@@ -3,14 +3,13 @@ package com.language.processing.service
 import com.language.processing.data._
 
 
-class Ngram(quran: Quran) {
+object NGram {
     
     
     
-    val signs = quran.getSignsWithSurahNames.map(_(2))
 
     
-    def generateNGram(numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
+    def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
       .sliding(numOfWords)
@@ -25,11 +24,10 @@ class Ngram(quran: Quran) {
   
   
   
-    def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
+    def generateUniquePhrases(signs: List[String], numOfWords: Int = 1): List[(String, Int)] = {
     
     val punctuationSet = (")(,.?;!:").toSet
   
-    val signs = quran.getSignsWithSurahNames.map(_(2))
 
    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
@@ -46,7 +44,7 @@ class Ngram(quran: Quran) {
 
    
 
-  def generateSearchResults(ngram: String): List[List[String]] = {
+  def generateSearchResults(signs: List[List[String]], ngram: String): List[List[String]] = {
     val signs = new Quran getSignsWithSurahNames
     
     //signs.filter(_(2).contains(ngram))
