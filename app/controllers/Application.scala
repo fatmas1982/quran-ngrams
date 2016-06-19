@@ -24,17 +24,16 @@ object Application extends Controller {
     Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
   }
   
-  def search(searchText: Option[String]) = Action {
-    val ngramString : String = searchText.getOrElse("")
-    val signs = Quran.getSignsWithSurahNames
-    Ok(views.html.search(NGram.generateSearchResults(signs, ngramString), ngramString))
-  }
-   
-  def unique(numOfWords: Option[Int]) = Action {
+ def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
     val signs = Quran.getSignsWithSurahNames.map(_(2))
     Ok(views.html.unique(NGram.generateUniquePhrases(signs, numOfWordsInt), numOfWordsInt))
   }
-  
+ 
+  def search(searchText: Option[String]) = Action {
+    val ngramString : String = searchText.getOrElse("")
+    val signs = Quran.getSignsWithSurahNames
+    Ok(views.html.search(QuranSearch.generateSearchResults(signs, ngramString), ngramString))
+  } 
 }
 

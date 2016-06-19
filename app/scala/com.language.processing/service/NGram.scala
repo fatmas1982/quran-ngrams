@@ -1,14 +1,8 @@
 package com.language.processing.service
 
-import com.language.processing.data._
 
 
 object NGram {
-    
-    
-    
-
-    
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")
@@ -39,16 +33,5 @@ object NGram {
        .filter{case(ngram, occurrences) => occurrences < 2 }
   }
 
-
-
-
-   
-
-  def generateSearchResults(signs: List[List[String]], ngram: String): List[List[String]] = {
-    val signs = new Quran getSignsWithSurahNames
-    
-    //signs.filter(_(2).contains(ngram))
-    signs.filter(_(2).matches("(?i:.*" + ngram + ".*)"))
-    
-  }
+  
 }
