@@ -3,9 +3,11 @@ package com.language.processing.service
 import com.language.processing.data._
 
 
-class Ngram(quran: Quran) {
+class Ngram(quran: QuranWithAya) {
     
-    val signs = quran signs
+    
+    
+    val signs = quran.getSignsWithSurahNames.map(_(2))
 
     
     def generateNGram(numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
@@ -23,11 +25,11 @@ class Ngram(quran: Quran) {
   
   
   
-  def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
+    def generateUniquePhrases(numOfWords: Int = 1): List[(String, Int)] = {
     
-  val punctuationSet = (")(,.?;!:").toSet
+    val punctuationSet = (")(,.?;!:").toSet
   
-  val signs =  new Quran signs
+    val signs = quran.getSignsWithSurahNames.map(_(2))
 
    (for( i <- 0 to signs.length-1) yield  signs(i)
       .split(" ")

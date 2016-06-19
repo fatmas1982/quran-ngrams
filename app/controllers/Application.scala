@@ -36,7 +36,8 @@ object Application extends Controller {
 
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
-    val ngram = new Ngram(new Quran)
+    val ngram = new Ngram(new QuranWithAya)
+    
     Ok(views.html.index(ngram.generateNGram(numOfWordsInt), numOfWordsInt))
   }
   
@@ -47,7 +48,8 @@ object Application extends Controller {
    
   def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-    val ngram = new Ngram(new Quran)
+    val ngram = new Ngram(new QuranWithAya)
+
     Ok(views.html.unique(ngram.generateUniquePhrases(numOfWordsInt), numOfWordsInt))
   }
   
