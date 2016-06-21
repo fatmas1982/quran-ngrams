@@ -31,9 +31,9 @@
                 <th>Repeated</th>
             </tr>
         </thead>
-        @for((word, freq) 
-        <- repeated) { <tr>
+        @for((word, verses) <- repeated) { <tr>
             <td>@word</td>
+            <td>@for((chapter, versenum, word, versetxt, city) <- verses) { @versetext <br/> }</td>
             </tr>
             }
     </table>

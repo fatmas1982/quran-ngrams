@@ -55,9 +55,9 @@ Seq[Any](format.raw/*1.65*/("""
                 <th>Repeated</th>
             </tr>
         </thead>
-        """),_display_(/*34.10*/for((word, freq) 
-        <- repeated) yield /*35.21*/ {_display_(Seq[Any](format.raw/*35.23*/(""" """),format.raw/*35.24*/("""<tr>
-            <td>"""),_display_(/*36.18*/word),format.raw/*36.22*/("""</td>
+        """),_display_(/*34.10*/for((word, verses) <- repeated) yield /*34.41*/ {_display_(Seq[Any](format.raw/*34.43*/(""" """),format.raw/*34.44*/("""<tr>
+            <td>"""),_display_(/*35.18*/word),format.raw/*35.22*/("""</td>
+            <td>"""),_display_(/*36.18*/for((chapter, versenum, word, versetxt, city) <- verses) yield /*36.74*/ {_display_(Seq[Any](format.raw/*36.76*/(""" """),_display_(/*36.78*/versetext),format.raw/*36.87*/(""" """),format.raw/*36.88*/("""<br/> """)))}),format.raw/*36.95*/("""</td>
             </tr>
             """)))}),format.raw/*38.14*/("""
     """),format.raw/*39.5*/("""</table>
@@ -83,11 +83,11 @@ Seq[Any](format.raw/*1.65*/("""
 object related extends related_Scope0.related
               /*
                   -- GENERATED --
-                  DATE: Tue Jun 21 02:32:50 UTC 2016
+                  DATE: Tue Jun 21 02:48:19 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/related.scala.html
-                  HASH: 4c2cc7378c10425b188212b6cd9b392507bbda3a
-                  MATRIX: 575->1|733->64|762->68|834->132|873->134|901->136|2280->1488|2334->1526|2374->1528|2403->1529|2452->1551|2477->1555|2545->1592|2577->1597
-                  LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|62->38|63->39
+                  HASH: 4570a74931fe9e3e672a56e1f11eb0d3cfbc8c37
+                  MATRIX: 575->1|733->64|762->68|834->132|873->134|901->136|2280->1488|2327->1519|2367->1521|2396->1522|2445->1544|2470->1548|2520->1571|2592->1627|2632->1629|2661->1631|2691->1640|2720->1641|2758->1648|2826->1685|2858->1690
+                  LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|58->34|58->34|58->34|59->35|59->35|60->36|60->36|60->36|60->36|60->36|60->36|60->36|62->38|63->39
                   -- GENERATED --
               */
           
