@@ -29,6 +29,13 @@ object Application extends Controller {
     val signs = Quran.getSignsWithSurahNames.map(_(2))
     Ok(views.html.unique(NGram.generateUniquePhrases(signs, numOfWordsInt), numOfWordsInt))
   }
+  
+  
+  def related(repeated: Option[Int]) = Action {
+    val repeatedInt : Int = repeated.getOrElse(1)
+    val signs = Quran.getSignsWithSurahNames
+    Ok(views.html.related(Related.generateRelations(signs, repeatedInt), repeatedInt))
+  }
  
   def search(searchText: Option[String]) = Action {
     val ngramString : String = searchText.getOrElse("")

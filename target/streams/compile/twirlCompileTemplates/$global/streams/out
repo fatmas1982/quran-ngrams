@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/home/ubuntu/workspace/app/views/unique.scala.1.html:1: Invalid template name [unique.scala.1.html], filenames must only consist of alphanumeric characters and underscores or periods.[0m
+[0m[[31merror[0m] [0m@(ngrams: List[(String, Int)], numOfWords: Int) [0m
+[0m[[31merror[0m] [0m^[0m
+[0m[[31merror[0m] [0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m
