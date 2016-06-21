@@ -11,7 +11,7 @@ object Related {
       )
       .toList
       .flatten
-      .groupBy{case(List(chapter, verse, word, text, city)) => word}
+      .groupBy{case(List(chapter, verse, word, text, city)) => word.capitalize}
       .toList
       .filter{case(ngram, occurrences) => occurrences.length == repeated }
       }
