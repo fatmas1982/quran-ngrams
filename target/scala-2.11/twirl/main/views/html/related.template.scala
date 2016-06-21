@@ -56,7 +56,7 @@ Seq[Any](format.raw/*1.65*/("""
             </tr>
         </thead>
         """),_display_(/*34.10*/for((word, freq) 
-        <- ngrams) yield /*35.19*/ {_display_(Seq[Any](format.raw/*35.21*/(""" """),format.raw/*35.22*/("""<tr>
+        <- repeated) yield /*35.21*/ {_display_(Seq[Any](format.raw/*35.23*/(""" """),format.raw/*35.24*/("""<tr>
             <td>"""),_display_(/*36.18*/word),format.raw/*36.22*/("""</td>
             </tr>
             """)))}),format.raw/*38.14*/("""
@@ -83,10 +83,10 @@ Seq[Any](format.raw/*1.65*/("""
 object related extends related_Scope0.related
               /*
                   -- GENERATED --
-                  DATE: Tue Jun 21 02:30:00 UTC 2016
+                  DATE: Tue Jun 21 02:31:13 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/related.scala.html
-                  HASH: d177990f70922edf3b4c5a9dd5f7e1ca8e23692c
-                  MATRIX: 575->1|733->64|762->68|834->132|873->134|901->136|2280->1488|2332->1524|2372->1526|2401->1527|2450->1549|2475->1553|2543->1590|2575->1595
+                  HASH: 4c2cc7378c10425b188212b6cd9b392507bbda3a
+                  MATRIX: 575->1|733->64|762->68|834->132|873->134|901->136|2280->1488|2334->1526|2374->1528|2403->1529|2452->1551|2477->1555|2545->1592|2577->1597
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|59->35|59->35|59->35|60->36|60->36|62->38|63->39
                   -- GENERATED --
               */

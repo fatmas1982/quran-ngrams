@@ -31,8 +31,8 @@
                 <th>Repeated</th>
             </tr>
         </thead>
-        @for((word, freq) 
-        <- ngrams) { <tr>
+        @for((word, freq) <- repeated) 
+           { <tr>
             <td>@word</td>
             </tr>
             }
