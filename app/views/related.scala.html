@@ -33,7 +33,7 @@
         </thead>
         @for((word, verses) <- repeated) { <tr>
             <td>@word</td>
-            <td>@for(List(chapter, versenum, word, versetxt, city) <- verses) { @versetxt <br/> }</td>            </tr>
+            <td>@for(List(chapter, versenum, word, versetxt, city) <- verses) { @versetxt <strong>(@chapter : @versenum - @city)</strong><br/><br/> }</td>            </tr>
             }
     </table>
 </div>
