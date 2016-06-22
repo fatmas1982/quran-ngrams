@@ -1,7 +1,7 @@
 package com.language.processing.service
 
-object Related {
-      def generateRelations(signs: List[List[String]], repeated: Int = 1): List[(String, List[List[String]])] = {
+object Legomenon {
+      def getLegomenon(signs: List[List[String]], repeated: Int = 1): List[(String, List[List[String]])] = {
             
       val punctuationSet = (")(,.?;!:").toSet
 
