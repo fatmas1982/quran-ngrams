@@ -33,7 +33,7 @@ object Application extends Controller {
   
   def related(repeated: Option[Int]) = Action {
     val repeatedInt : Int = repeated.getOrElse(1)
-    val signs = Quran.getSignsWithSurahNames
+    val signs = QuranArabic.getSignsWithSurahNames
     Ok(views.html.related(Related.generateRelations(signs, repeatedInt), repeatedInt))
   }
  
