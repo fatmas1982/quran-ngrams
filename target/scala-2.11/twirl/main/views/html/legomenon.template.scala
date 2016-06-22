@@ -38,10 +38,10 @@ Seq[Any](format.raw/*1.65*/("""
         <p>This Scala app lets you perform n-gram Analytics on the English Translation of Quran</p>
 
 
-        <a type="button" class="btn btn-lg btn-default" href="/legomenon=1"></span>hapax legomenon</a>
-        <a type="button" class="btn btn-lg btn-default" href="/legomenon=2"></span>dis legomenon</a>
-        <a type="button" class="btn btn-lg btn-default" href="/legomenon=3"></span>tris legomenon</a>
-        <a type="button" class="btn btn-lg btn-default" href="/legomenon=4"></span>tetrakis legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon?repeated=1"></span>hapax legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon?repeated=2"></span>dis legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon?repeated=3"></span>tris legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon?repeated=4"></span>tetrakis legomenon</a>
 
     </div>
 
@@ -81,10 +81,10 @@ Seq[Any](format.raw/*1.65*/("""
 object legomenon extends legomenon_Scope0.legomenon
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 22 06:41:36 UTC 2016
+                  DATE: Wed Jun 22 06:43:56 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/legomenon.scala.html
-                  HASH: b7aae9277d16103bcc38e18720af6f3f968e4eb3
-                  MATRIX: 579->1|737->64|766->68|822->116|861->118|889->120|2148->1352|2195->1383|2235->1385|2264->1386|2313->1408|2338->1412|2388->1435|2464->1495|2504->1497|2533->1499|2562->1507|2591->1508|2629->1518|2658->1525|2688->1526|2719->1529|2749->1537|2779->1538|2810->1541|2836->1545|2890->1567|2957->1603|2989->1608
+                  HASH: 9a263b64ca0bfb507b257aa835d540b8dfa9ff03
+                  MATRIX: 579->1|737->64|766->68|822->116|861->118|889->120|2184->1388|2231->1419|2271->1421|2300->1422|2349->1444|2374->1448|2424->1471|2500->1531|2540->1533|2569->1535|2598->1543|2627->1544|2665->1554|2694->1561|2724->1562|2755->1565|2785->1573|2815->1574|2846->1577|2872->1581|2926->1603|2993->1639|3025->1644
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|57->33|57->33|57->33|57->33|58->34|58->34|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|60->36|61->37
                   -- GENERATED --
               */
