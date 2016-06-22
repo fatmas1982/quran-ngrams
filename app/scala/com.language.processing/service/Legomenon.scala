@@ -1,6 +1,11 @@
 package com.language.processing.service
 
+// Author: Saqib Ali
+
 object Legomenon {
+      
+      //  hapax legomenon, dis legomenon, tris legomenon, and tetrakis legomenon implementation in Scala
+      
       def getLegomenon(signs: List[List[String]], repeated: Int = 1): List[(String, List[List[String]])] = {
             
       val punctuationSet = (")(,.?;!:").toSet

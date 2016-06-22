@@ -1,5 +1,7 @@
 package com.language.processing.service
 
+// Author: Saqib Ali
+
 object NGram {
   
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
