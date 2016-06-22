@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Tue Jun 21 02:12:20 UTC 2016
+// @DATE:Wed Jun 22 06:24:30 UTC 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -62,22 +62,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
-    def related: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.related",
-      """
-        function(repeated) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "related" + _qS([(""" + implicitly[QueryStringBindable[Option[Int]]].javascriptUnbind + """)("repeated", repeated)])})
-        }
-      """
-    )
-  
     // @LINE:8
     def unique: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.unique",
       """
         function(numOfWords) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "unique" + _qS([(""" + implicitly[QueryStringBindable[Option[Int]]].javascriptUnbind + """)("numOfWords", numOfWords)])})
+        }
+      """
+    )
+  
+    // @LINE:9
+    def legomenon: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.legomenon",
+      """
+        function(repeated) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "legomenon" + _qS([(""" + implicitly[QueryStringBindable[Option[Int]]].javascriptUnbind + """)("repeated", repeated)])})
         }
       """
     )

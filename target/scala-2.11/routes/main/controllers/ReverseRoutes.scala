@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Tue Jun 21 02:12:20 UTC 2016
+// @DATE:Wed Jun 22 06:24:30 UTC 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -46,16 +46,16 @@ package controllers {
       Call("GET", _prefix + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("numOfWords", numOfWords)))))
     }
   
-    // @LINE:9
-    def related(repeated:Option[Int]): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "related" + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("repeated", repeated)))))
-    }
-  
     // @LINE:8
     def unique(numOfWords:Option[Int]): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "unique" + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("numOfWords", numOfWords)))))
+    }
+  
+    // @LINE:9
+    def legomenon(repeated:Option[Int]): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "legomenon" + queryString(List(Some(implicitly[QueryStringBindable[Option[Int]]].unbind("repeated", repeated)))))
     }
   
   }

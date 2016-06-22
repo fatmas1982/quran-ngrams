@@ -31,10 +31,10 @@ object Application extends Controller {
   }
   
   
-  def related(repeated: Option[Int]) = Action {
+  def legomenon(repeated: Option[Int]) = Action {
     val repeatedInt : Int = repeated.getOrElse(1)
     val signs = QuranArabic.getSignsWithSurahNames
-    Ok(views.html.related(Legomenon.getLegomenon(signs, repeatedInt), repeatedInt))
+    Ok(views.html.legomenon(Legomenon.getLegomenon(signs, repeatedInt), repeatedInt))
   }
  
   def search(searchText: Option[String]) = Action {

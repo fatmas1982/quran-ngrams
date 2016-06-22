@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ubuntu/workspace/conf/routes
-// @DATE:Tue Jun 21 02:12:20 UTC 2016
+// @DATE:Wed Jun 22 06:24:30 UTC 2016
 
 package router
 
@@ -40,7 +40,7 @@ class Routes extends GeneratedRouter {
     ("""GET""", prefix, """controllers.Application.index(numOfWords:Option[Int])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """search""", """controllers.Application.search(ngram:Option[String])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unique""", """controllers.Application.unique(numOfWords:Option[Int])"""),
-    ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """related""", """controllers.Application.related(repeated:Option[Int])"""),
+    ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """legomenon""", """controllers.Application.legomenon(repeated:Option[Int])"""),
     ("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -101,19 +101,19 @@ class Routes extends GeneratedRouter {
   )
 
   // @LINE:9
-  private[this] lazy val controllers_Application_related3_route: Route.ParamsExtractor = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("related")))
+  private[this] lazy val controllers_Application_legomenon3_route: Route.ParamsExtractor = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("legomenon")))
   )
-  private[this] lazy val controllers_Application_related3_invoker = createInvoker(
-    controllers.Application.related(fakeValue[Option[Int]]),
+  private[this] lazy val controllers_Application_legomenon3_invoker = createInvoker(
+    controllers.Application.legomenon(fakeValue[Option[Int]]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "related",
+      "legomenon",
       Seq(classOf[Option[Int]]),
       "GET",
       """""",
-      this.prefix + """related"""
+      this.prefix + """legomenon"""
     )
   )
 
@@ -156,9 +156,9 @@ class Routes extends GeneratedRouter {
       }
   
     // @LINE:9
-    case controllers_Application_related3_route(params) =>
+    case controllers_Application_legomenon3_route(params) =>
       call(params.fromQuery[Option[Int]]("repeated", None)) { (repeated) =>
-        controllers_Application_related3_invoker.call(controllers.Application.related(repeated))
+        controllers_Application_legomenon3_invoker.call(controllers.Application.legomenon(repeated))
       }
   
     // @LINE:15
