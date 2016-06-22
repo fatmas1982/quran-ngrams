@@ -5,7 +5,7 @@ import play.twirl.api._
 import play.twirl.api.TemplateMagic._
 
 
-     object related_Scope0 {
+     object legomenon_Scope0 {
 import models._
 import controllers._
 import play.api.i18n._
@@ -14,7 +14,7 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-class related extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[scala.Tuple2[String, List[List[String]]]],Int,play.twirl.api.HtmlFormat.Appendable] {
+class legomenon extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[scala.Tuple2[String, List[List[String]]]],Int,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
   def apply/*1.2*/(repeated: List[(String, List[List[String]])], numOfWords: Int):play.twirl.api.HtmlFormat.Appendable = {
@@ -79,13 +79,13 @@ Seq[Any](format.raw/*1.65*/("""
 }
 
 /**/
-object related extends related_Scope0.related
+object legomenon extends legomenon_Scope0.legomenon
               /*
                   -- GENERATED --
-                  DATE: Tue Jun 21 02:59:31 UTC 2016
-                  SOURCE: /home/ubuntu/workspace/app/views/related.scala.html
+                  DATE: Wed Jun 22 06:27:02 UTC 2016
+                  SOURCE: /home/ubuntu/workspace/app/views/legomenon.scala.html
                   HASH: 66d305ac6d1c99248b493e9281eb4d651650ff3a
-                  MATRIX: 575->1|733->64|762->68|834->132|873->134|901->136|2280->1488|2327->1519|2367->1521|2396->1522|2445->1544|2470->1548|2520->1571|2596->1631|2636->1633|2665->1635|2694->1643|2723->1644|2761->1654|2790->1661|2820->1662|2851->1665|2881->1673|2911->1674|2942->1677|2968->1681|3022->1703|3089->1739|3121->1744
+                  MATRIX: 579->1|737->64|766->68|838->132|877->134|905->136|2284->1488|2331->1519|2371->1521|2400->1522|2449->1544|2474->1548|2524->1571|2600->1631|2640->1633|2669->1635|2698->1643|2727->1644|2765->1654|2794->1661|2824->1662|2855->1665|2885->1673|2915->1674|2946->1677|2972->1681|3026->1703|3093->1739|3125->1744
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|58->34|58->34|58->34|58->34|59->35|59->35|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|60->36|61->37|62->38
                   -- GENERATED --
               */
