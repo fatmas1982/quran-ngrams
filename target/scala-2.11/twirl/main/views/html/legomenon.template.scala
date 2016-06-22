@@ -24,7 +24,7 @@ class legomenon extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,F
 
 Seq[Any](format.raw/*1.65*/(""" 
 
-"""),_display_(/*3.2*/main("Quran Analysis: " + numOfWords + " word N-grams in Quran")/*3.66*/ {_display_(Seq[Any](format.raw/*3.68*/("""
+"""),_display_(/*3.2*/main("Quran Analysis: Hapax legomenon in Quran")/*3.50*/ {_display_(Seq[Any](format.raw/*3.52*/("""
 
 """),format.raw/*5.1*/("""<div class="jumbotron text-center">
     <div class="container">
@@ -38,10 +38,10 @@ Seq[Any](format.raw/*1.65*/("""
         <p>This Scala app lets you perform n-gram Analytics on the English Translation of Quran</p>
 
 
-        <a type="button" class="btn btn-lg btn-default" href="/?legomenon=1"></span>hapax legomenon</a>
-        <a type="button" class="btn btn-lg btn-default" href="/?legomenon=2"></span>dis legomenon</a>
-        <a type="button" class="btn btn-lg btn-default" href="/?legomenon=3"></span>tris legomenon</a>
-        <a type="button" class="btn btn-lg btn-default" href="/?legomenon=4"></span>tetrakis legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon=1"></span>hapax legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon=2"></span>dis legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon=3"></span>tris legomenon</a>
+        <a type="button" class="btn btn-lg btn-default" href="/legomenon=4"></span>tetrakis legomenon</a>
 
     </div>
 
@@ -81,10 +81,10 @@ Seq[Any](format.raw/*1.65*/("""
 object legomenon extends legomenon_Scope0.legomenon
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 22 06:38:26 UTC 2016
+                  DATE: Wed Jun 22 06:41:36 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/legomenon.scala.html
-                  HASH: 75620afa5877c6f1ac7698253ed433d976fea08f
-                  MATRIX: 579->1|737->64|766->68|838->132|877->134|905->136|2168->1372|2215->1403|2255->1405|2284->1406|2333->1428|2358->1432|2408->1455|2484->1515|2524->1517|2553->1519|2582->1527|2611->1528|2649->1538|2678->1545|2708->1546|2739->1549|2769->1557|2799->1558|2830->1561|2856->1565|2910->1587|2977->1623|3009->1628
+                  HASH: b7aae9277d16103bcc38e18720af6f3f968e4eb3
+                  MATRIX: 579->1|737->64|766->68|822->116|861->118|889->120|2148->1352|2195->1383|2235->1385|2264->1386|2313->1408|2338->1412|2388->1435|2464->1495|2504->1497|2533->1499|2562->1507|2591->1508|2629->1518|2658->1525|2688->1526|2719->1529|2749->1537|2779->1538|2810->1541|2836->1545|2890->1567|2957->1603|2989->1608
                   LINES: 20->1|25->1|27->3|27->3|27->3|29->5|57->33|57->33|57->33|57->33|58->34|58->34|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|59->35|60->36|61->37
                   -- GENERATED --
               */
