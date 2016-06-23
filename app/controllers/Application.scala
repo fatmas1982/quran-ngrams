@@ -20,7 +20,7 @@ object Application extends Controller {
     
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
-    val signs = QuranArabic.getSignsWithSurahNames.map(_(2))
+    val signs = Quran.getSignsWithSurahNames.map(_(2))
     Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
   }
   
