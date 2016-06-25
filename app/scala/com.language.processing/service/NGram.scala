@@ -7,7 +7,6 @@ object NGram {
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .replaceAll("[\\p{P}\\s]+$", "")
-    //  .replaceAll("\\s*\\p{Punct}+\\s*$", "")
       .split(" ")
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
@@ -22,7 +21,7 @@ object NGram {
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
-      val all = ((10 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      val all = ((2 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
       all.map(calc(_, all))
       .distinct
