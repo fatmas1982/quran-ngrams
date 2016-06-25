@@ -27,7 +27,7 @@ object NGram {
       
       //for (i <- 10 to 15) yield generateNGram(signs, i)
       
-      def concat(Int: i, l: List[(String, Int)]) : List[(String, Int)] = {
+      def concat(i: Int, l: List[(String, Int)]) : List[(String, Int)] = {
           if (i==1) l else l ::: concat(i-1, generateNGram(signs, i))
       }
       
