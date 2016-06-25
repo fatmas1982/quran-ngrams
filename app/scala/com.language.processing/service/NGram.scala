@@ -20,8 +20,8 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
       
-      val five = generateNGram(signs, 5)
-      val six = generateNGram(signs, 6)
+      val five = generateNGram(signs, 24)
+      val six = generateNGram(signs, 23)
       
       val all = five ::: six
       all
