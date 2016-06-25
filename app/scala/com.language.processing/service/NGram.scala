@@ -28,7 +28,7 @@ object NGram {
       //for (i <- 10 to 15) yield generateNGram(signs, i)
       
       def concat(i: Int, l: List[(String, Int)]) : List[(String, Int)] = {
-          if (i==15) l else l ::: concat(i-1, generateNGram(signs, i))
+          if (i==2) l else l ::: concat(i-1, generateNGram(signs, i))
       }
       
       val all = concat(23, generateNGram(signs, 24))
