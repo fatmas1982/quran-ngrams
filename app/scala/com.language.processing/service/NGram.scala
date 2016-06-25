@@ -11,7 +11,7 @@ object NGram {
       .filter(_.size==numOfWords)
       .toList
       .map(_.mkString(" "))
-      .replaceAll("[\\p{P}\\s]+$", "")
+      .map(_.replaceAll("[\\p{P}\\s]+$", ""))
     )
        .flatten
        .groupBy(x => x)   
