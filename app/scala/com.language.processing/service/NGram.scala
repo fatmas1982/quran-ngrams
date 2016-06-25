@@ -18,6 +18,16 @@ object NGram {
   }
   
   
+  def longestNGram(signs: List[String]): List[(String, Int)] = {
+      
+      val five = generateNGram(signs, 5)
+      val six = generateNGram(signs, 6)
+      
+      val all = five ::: six
+      all
+      
+  }
+  
   
   def generateUniquePhrases(signs: List[String], numOfWords: Int = 1): List[(String, Int)] = {
     
