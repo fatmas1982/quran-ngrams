@@ -44,7 +44,7 @@ object NGram {
   
   def calc(init: (String, Int), l: List[(String, Int)]): (String, Int) = {
     if (l.isEmpty) init
-    else if (l.head._1.contains(init._1)) calc(l.head, l.tail)
+    else if (l.head._1.contains(init._1)) l.head
     else calc(init, l.tail)
   }
   
