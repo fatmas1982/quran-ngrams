@@ -12,7 +12,8 @@ object NGram {
       .filter(_.size==numOfWords)
       .toList
       .map(_.mkString(" "))
-      ).flatten
+      )
+       .flatten
        .groupBy(x => x)   
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
