@@ -28,10 +28,13 @@ object NGram {
       //for (i <- 10 to 15) yield generateNGram(signs, i)
       
       def concat(i: Int, l: List[(String, Int)]) : List[(String, Int)] = {
-          if (i==12) l else l ::: concat(i-1, generateNGram(signs, i))
+          if (i==11) l else l ::: concat(i-1, generateNGram(signs, i))
       }
       
-      val all = concat(23, generateNGram(signs, 24))
+//val all = concat(23, generateNGram(signs, 24))
+
+      val all = (1 to 24).foldRight(List[(String, Int)]())( (i, l) => l ::: generateNGram(signs, i))
+
       all.map(calc(_, all)).distinct
       
       
