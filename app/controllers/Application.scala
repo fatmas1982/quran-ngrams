@@ -22,8 +22,8 @@ object Application extends Controller {
     //val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
     val numOfWordsInt : Int = numOfWords.getOrElse(-1)
     val signs = Quran.getSignsWithSurahNames.map(_(2))
-    if (numOfWordsInt==-1)
-      Ok(views.html.index(NGram.longestNGram(signs, numOfWordsInt), numOfWordsInt))
+    if (numOfWordsInt == -1)
+      Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
     else
       Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
   }
