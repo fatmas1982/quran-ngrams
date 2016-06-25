@@ -10,3 +10,6 @@ clean
 quit
 exit
 ~compile
+build
+deploy
+exit
