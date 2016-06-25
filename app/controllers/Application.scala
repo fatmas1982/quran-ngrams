@@ -19,7 +19,6 @@ object Application extends Controller {
   }
     
   def index(numOfWords: Option[Int]) = Action {
-    //val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 5) 5 else numOfWords.getOrElse(10)
     val numOfWordsInt : Int = numOfWords.getOrElse(-1)
     val signs = Quran.getSignsWithSurahNames.map(_(2))
     if (numOfWordsInt == -1)
