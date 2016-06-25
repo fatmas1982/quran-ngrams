@@ -27,7 +27,7 @@ object NGram {
       }
       
 
-      val all = (12 to 12).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))
+      val all = (12 to 15).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))
 
       all.map(calc(_, all)).distinct
       
