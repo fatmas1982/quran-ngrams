@@ -26,7 +26,7 @@ object Application extends Controller {
   
  def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-    val signs = Quran.getSignsWithSurahNames.map(_(2))
+    val signs = QuranArabic.getSignsWithSurahNames.map(_(2))
     Ok(views.html.unique(NGram.longestNGram(signs), numOfWordsInt))
   }
   
