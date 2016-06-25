@@ -6,13 +6,13 @@ object NGram {
   
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     (for( i <- 0 to signs.length-1) yield  signs(i)
-      .replaceAll("[\\p{P}\\s]+$", "")
       .split(" ")
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .toList
       .map(_.mkString(" "))
-      )
+      .replaceAll("[\\p{P}\\s]+$", "")
+    )
        .flatten
        .groupBy(x => x)   
        .toList   
