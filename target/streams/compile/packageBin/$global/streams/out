@@ -132,8 +132,6 @@
 [0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/com/language/processing/service/NGram$$anonfun$generateNGram$4.class[0m
 [0m[[0mdebug[0m] [0m	Global$.class[0m
 [0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/Global$.class[0m
-[0m[[0mdebug[0m] [0m	com/language/processing/service/NGram$$anonfun$longestNGram$2.class[0m
-[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/com/language/processing/service/NGram$$anonfun$longestNGram$2.class[0m
 [0m[[0mdebug[0m] [0m	views/html[0m
 [0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/views/html[0m
 [0m[[0mdebug[0m] [0m	com/language/processing/data/QuranArabic$$anonfun$getSignsWithSurahNames$1.class[0m
@@ -206,8 +204,6 @@
 [0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/com/language/processing/service/NGram$$anonfun$generateUniquePhrases$5.class[0m
 [0m[[0mdebug[0m] [0m	com/language/processing[0m
 [0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/com/language/processing[0m
-[0m[[0mdebug[0m] [0m	com/language/processing/service/NGram$$anonfun$longestNGram$1.class[0m
-[0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/com/language/processing/service/NGram$$anonfun$longestNGram$1.class[0m
 [0m[[0mdebug[0m] [0m	router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.class[0m
 [0m[[0mdebug[0m] [0m	  /home/ubuntu/workspace/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.class[0m
 [0m[[0mdebug[0m] [0m	views/html/main_Scope0$main$$anonfun$f$1$$anonfun$apply$1.class[0m

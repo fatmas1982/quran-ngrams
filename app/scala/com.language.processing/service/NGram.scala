@@ -22,7 +22,7 @@ object NGram {
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
-      val all = ((2 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      val all = ((10 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
       
       all
