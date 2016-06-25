@@ -12,10 +12,10 @@ object NGram {
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .toList
-      .map(_.mkString(" "))
+      .par.map(_.mkString(" ")).toList
       ).flatten.toList.groupBy(x => x)   
        .toList   
-       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .par.map{case(ngram, occurrences) => (ngram, occurrences.length)}.toList
        .filter{case(ngram, occurrences) => occurrences > 1 }
   }
   
