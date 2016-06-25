@@ -31,7 +31,7 @@ object NGram {
           if (i==1) l else l ::: concat(i-1, generateNGram(signs, i))
       }
       
-      val all = concat(24, generateNGram(signs, 25))
+      val all = concat(23, generateNGram(signs, 24))
       all.map(calc(_, all)).distinct
       
       
