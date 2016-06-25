@@ -13,7 +13,9 @@ object NGram {
       .filter(_.size==numOfWords)
       .toList
       .map(_.mkString(" "))
-      ).flatten.toList.groupBy(x => x)   
+      ).flatten
+       //.toList
+       .groupBy(x => x)   
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
        .filter{case(ngram, occurrences) => occurrences > 1 }
@@ -21,7 +23,8 @@ object NGram {
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
-      val all = ((10 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)
+      val all = ((10 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+                .sortWith(_._1.length > _._1.length)
       all.map(calc(_, all)).distinct.sortBy(_._2).reverse
   }
      
