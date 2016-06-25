@@ -24,9 +24,23 @@ object NGram {
       val six = generateNGram(signs, 23)
       
       val all = five ::: six
-      all
+      
+      val l = List(("test",1), ("test2",2), ("3test3",4)).sortWith(_._1.length > _._1.length)
+      val s = ("es", 0)
+      
+      all.map(calc(_, all)).distinct
+      
+      
+      
       
   }
+  
+  def calc(init: (String, Int), l: List[(String, Int)]): (String, Int) = {
+    if (l.isEmpty) init
+    else if (l.head._1.contains(init._1)) calc(l.head, l.tail)
+    else calc(init, l.tail)
+  }
+  
   
   
   def generateUniquePhrases(signs: List[String], numOfWords: Int = 1): List[(String, Int)] = {
