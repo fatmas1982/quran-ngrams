@@ -23,11 +23,15 @@ object NGram {
       //val  = generateNGram(signs, 24)
       //val six = generateNGram(signs, 23)
       
-      val all = generateNGram(signs, 24) ::: generateNGram(signs, 23) ::: generateNGram(signs, 22) ::: generateNGram(signs, 21) ::: generateNGram(signs, 20)
+      //val all = generateNGram(signs, 24) ::: generateNGram(signs, 23) ::: generateNGram(signs, 22) ::: generateNGram(signs, 21) ::: generateNGram(signs, 20)
       
+      //for (i <- 10 to 15) yield generateNGram(signs, i)
       
+      def concat(Int: i, l: List[(String, Int)]) : List[(String, Int)] = {
+          if (i==1) l else l ::: concat(i-1, generateNGram(signs, i))
+      }
       
-      
+      val all = concat(24, generateNGram(signs, 25))
       all.map(calc(_, all)).distinct
       
       
