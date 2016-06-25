@@ -33,7 +33,7 @@ object NGram {
       
 //val all = concat(23, generateNGram(signs, 24))
 
-      val all = (1 to 24).foldRight(List[(String, Int)]())( (i, l) => l ::: generateNGram(signs, i))
+      val all = (10 to 24).foldRight(List[(String, Int)]())( (i, l) => l ::: generateNGram(signs, i))
 
       all.map(calc(_, all)).distinct
       
