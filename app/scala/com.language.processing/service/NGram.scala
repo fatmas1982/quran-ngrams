@@ -20,13 +20,13 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
       
-      val five = generateNGram(signs, 24)
-      val six = generateNGram(signs, 23)
+      //val  = generateNGram(signs, 24)
+      //val six = generateNGram(signs, 23)
       
-      val all = five ::: six
+      val all = generateNGram(signs, 24) ::: generateNGram(signs, 23) ::: generateNGram(signs, 22) ::: generateNGram(signs, 21) ::: generateNGram(signs, 20)
       
-      val l = List(("test",1), ("test2",2), ("3test3",4)).sortWith(_._1.length > _._1.length)
-      val s = ("es", 0)
+      
+      
       
       all.map(calc(_, all)).distinct
       
