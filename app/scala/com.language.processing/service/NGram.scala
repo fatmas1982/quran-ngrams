@@ -19,22 +19,10 @@ object NGram {
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
-      
-  
-      
-      def concat(i: Int, l: List[(String, Int)]) : List[(String, Int)] = {
-          if (i==11) l else l ::: concat(i-1, generateNGram(signs, i))
-      }
-      
-
       val all = (12 to 15).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))
-
-      all.map(calc(_, all)).distinct
-      
-      
-      
-      
+      all.par.map(calc(_, all)).toList.distinct
   }
+     
   
   def calc(init: (String, Int), l: List[(String, Int)]): (String, Int) = {
     if (l.isEmpty) init
