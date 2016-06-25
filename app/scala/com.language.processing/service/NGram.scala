@@ -20,20 +20,14 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
       
-      //val  = generateNGram(signs, 24)
-      //val six = generateNGram(signs, 23)
-      
-      //val all = generateNGram(signs, 24) ::: generateNGram(signs, 23) ::: generateNGram(signs, 22) ::: generateNGram(signs, 21) ::: generateNGram(signs, 20)
-      
-      //for (i <- 10 to 15) yield generateNGram(signs, i)
+  
       
       def concat(i: Int, l: List[(String, Int)]) : List[(String, Int)] = {
           if (i==11) l else l ::: concat(i-1, generateNGram(signs, i))
       }
       
-//val all = concat(23, generateNGram(signs, 24))
 
-      val all = (3 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))
+      val all = (12 to 12).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))
 
       all.map(calc(_, all)).distinct
       
