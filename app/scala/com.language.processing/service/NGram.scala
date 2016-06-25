@@ -17,12 +17,12 @@ object NGram {
        .groupBy(x => x)   
        .toList   
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-       .filter{case(ngram, occurrences) => occurrences > 2 }
+       .filter{case(ngram, occurrences) => occurrences > 1}
   }
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
-      val all = ((2 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      val all = ((5 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
      
       all.map(calc(_, all))
