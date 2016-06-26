@@ -10,8 +10,10 @@ object NGram {
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .toList
-      .map(_.mkString(" ").replaceAll("\\s*\\p{Punct}+\\s*$", "").replaceAll("\\s*\\p{Punct}+\\s*$", ""))
-      
+      .map(_.mkString(" "))
+      .map(_.replaceAll("[\\p{P}\\s]+$", ""))
+      .map(_.replaceAll("[\\p{P}\\s]+$", ""))
+
     )
        .flatten
        .groupBy(x => x)   
@@ -22,7 +24,7 @@ object NGram {
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
-      val all = ((7 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      val all = ((5 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
      
       all.map(calc(_, all))
