@@ -1,5 +1,12 @@
 @(ngrams: List[(String, Int)], numOfWords: Int) 
 
+
+@if(numOfWords == -1) {
+  @main("Quran Analysis: N-grams in Quran") {
+} else {
+  @main("Quran Analysis: " + numOfWords + " word N-grams in Quran") {
+}
+
 @main("Quran Analysis: " + numOfWords + " word N-grams in Quran") {
 
 <div class="jumbotron text-center">
