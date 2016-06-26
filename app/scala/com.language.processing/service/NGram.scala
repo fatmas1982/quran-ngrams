@@ -14,7 +14,7 @@ object NGram {
       .toList
       .map(_.mkString(" "))
       .map(_.replaceAll("[\\p{P}\\s]+$", ""))
-      .map(_.replaceAll("[\\p{P}\\s]+$", ""))
+      //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
 
 
     )
