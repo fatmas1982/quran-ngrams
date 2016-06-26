@@ -10,8 +10,8 @@ object NGram {
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .toList
-      .map(_.mkString(" "))
-      .map(_.replaceAll("[\\p{P}\\s]+$", ""))
+      .map(_.mkString(" ").replaceAll("\\s*\\p{Punct}+\\s*$", "").replaceAll("\\s*\\p{Punct}+\\s*$", ""))
+      
     )
        .flatten
        .groupBy(x => x)   
