@@ -20,7 +20,7 @@ object Application extends Controller {
     
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = numOfWords.getOrElse(-1)
-    val signs = Quran.getSignsWithSurahNames.map(_(2))
+    val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
     if (numOfWordsInt == -1)
       Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
     else
