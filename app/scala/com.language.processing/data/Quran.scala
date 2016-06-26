@@ -1,6 +1,6 @@
 package com.language.processing.data
 
-object QuranPickthall{
+object Quran{
     
 var signs = Array(
 "1|2|Praise be to Allah, Lord of the Worlds," , 
