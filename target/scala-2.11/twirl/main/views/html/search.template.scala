@@ -41,7 +41,7 @@ Seq[Any](format.raw/*1.44*/(""" """),_display_(/*1.46*/main("Quran verses contai
         <h1>Quran N-gram Analytics</h1>
         <p>This Scala app lets you perform n-gram Analytics on the English Translation of Quran</p>
 
-        <a type="button" class="btn btn-lg btn-default" href="/"></span>10 words n-grams</a>
+        <a type="button" class="btn btn-lg btn-default" href="/"></span>Home</a>
         <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=10"></span>10 words n-grams</a>
         <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=11"></span>11 words n-grams</a>
         <a type="button" class="btn btn-lg btn-default" href="/?numOfWords=12"></span>12 words n-grams</a>
@@ -91,10 +91,10 @@ Seq[Any](format.raw/*1.44*/(""" """),_display_(/*1.46*/main("Quran verses contai
 object search extends search_Scope0.search
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 26 23:53:42 UTC 2016
+                  DATE: Sun Jun 26 23:58:03 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/search.scala.html
-                  HASH: e2400a996312c81d2bbc80ecdb9cbc2e2411d704
-                  MATRIX: 548->1|685->43|713->45|762->86|801->88|829->90|2189->1424|2215->1441|2254->1442|2286->1447|2408->1542|2434->1547|2490->1573|2523->1579|2692->1721|2706->1726|2719->1730|2766->1739|2807->1752|2856->1774|2884->1781|2913->1782|2950->1792|2978->1799|3007->1800|3037->1803|3065->1810|3094->1811|3124->1814|3152->1821|3213->1851|3245->1856
+                  HASH: b1d7f42f875960b9080367d9532114581b085ad6
+                  MATRIX: 548->1|685->43|713->45|762->86|801->88|829->90|2177->1412|2203->1429|2242->1430|2274->1435|2396->1530|2422->1535|2478->1561|2511->1567|2680->1709|2694->1714|2707->1718|2754->1727|2795->1740|2844->1762|2872->1769|2901->1770|2938->1780|2966->1787|2995->1788|3025->1791|3053->1798|3082->1799|3112->1802|3140->1809|3201->1839|3233->1844
                   LINES: 20->1|25->1|25->1|25->1|25->1|27->3|55->31|55->31|55->31|56->32|57->33|57->33|59->35|61->37|67->43|67->43|67->43|67->43|68->44|69->45|69->45|69->45|69->45|69->45|69->45|69->45|69->45|69->45|69->45|69->45|70->46|71->47
                   -- GENERATED --
               */
