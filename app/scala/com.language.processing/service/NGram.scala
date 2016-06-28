@@ -12,7 +12,8 @@ object NGram {
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .toList
-      .map(_.mkString(" "))
+      .par.map(_.mkString(" "))
+      .toList
       //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
       //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
 
@@ -21,7 +22,8 @@ object NGram {
        .flatten
        .groupBy(x => x)   
        .toList   
-       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .par.map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .toList
        .filter{case(ngram, occurrences) => occurrences > 1}
   }
   
@@ -30,7 +32,8 @@ object NGram {
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
      
-      all.map(calc(_, all))
+      all.par.map(calc(_, all))
+      .toList
       .distinct
       .sortBy(_._2)
       .reverse 
