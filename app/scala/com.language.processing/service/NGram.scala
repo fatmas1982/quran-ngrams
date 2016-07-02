@@ -13,7 +13,8 @@ object NGram {
     val conf = new SparkConf()
     .setMaster(System.getenv("spark_cluster"))
     .setAppName("Simple Application")
-  
+    
+    println(System.getenv("spark_cluster"));
     
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")
