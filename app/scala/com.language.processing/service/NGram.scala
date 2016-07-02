@@ -13,7 +13,7 @@ object NGram {
     val conf = new SparkConf()
     .setMaster(System.getenv("spark_cluster"))
     .setAppName("Simple Application")
-    val sc = new SparkContext(conf)
+    //val sc = new SparkContext(conf)
 
     
     println(sc.toString);
