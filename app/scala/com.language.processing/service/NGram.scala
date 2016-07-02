@@ -10,10 +10,7 @@ object NGram {
   
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     
-    val conf = new SparkConf()
-    .setMaster(System.getenv("spark_cluster"))
-    .setAppName("Simple Application")
-    val sc = new SparkContext(conf)
+ 
 
     
    // println(sc.toString);
@@ -40,6 +37,12 @@ object NGram {
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
+    
+       val conf = new SparkConf()
+    .setMaster(System.getenv("spark_cluster"))
+    .setAppName("Simple Application")
+    val sc = new SparkContext(conf)
+    
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
      
