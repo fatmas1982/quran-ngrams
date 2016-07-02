@@ -10,7 +10,9 @@ object NGram {
   
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
     
-    val conf = new SparkConf().setAppName(System.getenv("spark_cluster"), "Simple Application")
+    val conf = new SparkConf()
+    .setMaster(System.getenv("spark_cluster"))
+    .setAppName("Simple Application")
   
     
     (for( i <- 0 to signs.length-1) yield  signs(i)
