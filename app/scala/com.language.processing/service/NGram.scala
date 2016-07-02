@@ -1,10 +1,18 @@
 package com.language.processing.service
 
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
+import org.apache.spark.SparkConf
+
 // Author: Saqib Ali
 
 object NGram {
   
     def generateNGram(signs: List[String], numOfWords: Int): List[(String, Int)] = { // Scala N-gram secret sauce 
+    
+    val conf = new SparkConf().setAppName(System.getenv("spark_cluster"), "Simple Application")
+  
+    
     (for( i <- 0 to signs.length-1) yield  signs(i)
       .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")
       .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")

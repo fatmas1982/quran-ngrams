@@ -82,7 +82,7 @@ Seq[Any](format.raw/*1.32*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 26 23:53:42 UTC 2016
+                  DATE: Tue Jun 28 05:17:53 UTC 2016
                   SOURCE: /home/ubuntu/workspace/app/views/main.scala.html
                   HASH: 6db77523a74f0b50d7055396181b43f00c552100
                   MATRIX: 530->1|655->31|683->33|753->77|778->82|1268->544|1297->545|1338->558|1436->628|1465->629|1510->646|1590->698|1619->699|1859->912|1888->913|2119->1118|2147->1125|2175->1126
