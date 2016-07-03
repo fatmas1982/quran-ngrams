@@ -65,7 +65,7 @@ object NGram {
     //   val sc = new SparkContext(conf)
     
     
-      val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
+//      val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
     //val x = List(8 to 24)
 
 
@@ -78,7 +78,7 @@ object NGram {
     )
   */
   
-  val concat = (8 to 24).par.map(generateNGram(signs, _)).reduce(_ ::: _)
+  val concat = time {(8 to 24).par.map(generateNGram(signs, _)).reduce(_ ::: _)}
 
       
 
