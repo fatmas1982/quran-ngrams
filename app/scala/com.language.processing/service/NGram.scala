@@ -99,7 +99,7 @@ object NGram {
       
       
       time {concat.sortWith(_._1.length > _._1.length)
-      .map(calc(_, all))
+      .map(calc(_, concat))
       .distinct
       .sortBy(_._2)
       .reverse} 
