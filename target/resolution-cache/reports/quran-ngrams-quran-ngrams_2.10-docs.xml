@@ -7,39 +7,39 @@
 		revision="1.0-SNAPSHOT"
 		conf="docs"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160702223738"/>
+		date="20160702224418"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-omnidoc_2.10">
-			<revision name="2.4.3" status="release" pubdate="20151118222059" resolver="public" artresolver="public" homepage="https://github.com/playframework/omnidoc" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+			<revision name="2.4.3" status="release" pubdate="20151118222059" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/omnidoc" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1703" time="122" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-omnidoc_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-omnidoc_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-omnidoc_2.10/2.4.3/play-omnidoc_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="2824" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-omnidoc_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-omnidoc_2.10/2.4.3/play-omnidoc_2.10-2.4.3.pom"/>
 				<caller organisation="quran-ngrams" name="quran-ngrams_2.10" conf="docs" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="play-omnidoc_2.10" type="jar" ext="jar" status="successful" details="" size="9761451" time="448" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-omnidoc_2.10/jars/play-omnidoc_2.10-2.4.3.jar">
+					<artifact name="play-omnidoc_2.10" type="jar" ext="jar" status="no" details="" size="9761451" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-omnidoc_2.10/jars/play-omnidoc_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-omnidoc_2.10/2.4.3/play-omnidoc_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-docs_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907010027" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+			<revision name="2.4.3" status="release" pubdate="20150907010027" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1864" time="107" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-docs_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-docs_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-docs_2.10/2.4.3/play-docs_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="2957" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-docs_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-docs_2.10/2.4.3/play-docs_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-omnidoc_2.10" conf="default, compile, runtime, master" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-docs_2.10" type="jar" ext="jar" status="successful" details="" size="8571341" time="557" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-docs_2.10/jars/play-docs_2.10-2.4.3.jar">
+					<artifact name="play-docs_2.10" type="jar" ext="jar" status="no" details="" size="8571341" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-docs_2.10/jars/play-docs_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-docs_2.10/2.4.3/play-docs_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-doc_2.10">
-			<revision name="1.2.2" status="release" pubdate="20150319022715" resolver="public" artresolver="public" homepage="https://github.com/playframework/play-doc" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
+			<revision name="1.2.2" status="release" pubdate="20150319022715" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-doc" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2528" time="75" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-doc_2.10/ivy-1.2.2.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-doc_2.10/ivy-1.2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-doc_2.10/1.2.2/play-doc_2.10-1.2.2.pom"/>
+				<metadata-artifact status="no" details="" size="3198" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-doc_2.10/ivy-1.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-doc_2.10/1.2.2/play-doc_2.10-1.2.2.pom"/>
 				<caller organisation="com.typesafe.play" name="play-docs_2.10" conf="compile, runtime" rev="1.2.2" rev-constraint-default="1.2.2" rev-constraint-dynamic="1.2.2" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-doc_2.10" type="jar" ext="jar" status="successful" details="" size="177654" time="121" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-doc_2.10/jars/play-doc_2.10-1.2.2.jar">
+					<artifact name="play-doc_2.10" type="jar" ext="jar" status="no" details="" size="177654" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-doc_2.10/jars/play-doc_2.10-1.2.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-doc_2.10/1.2.2/play-doc_2.10-1.2.2.jar"/>
 					</artifact>
 				</artifacts>
@@ -133,12 +133,12 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-netty-server_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005908" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+			<revision name="2.4.3" status="release" pubdate="20150907005908" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2680" time="183" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-netty-server_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-netty-server_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-server_2.10/2.4.3/play-netty-server_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="3484" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-netty-server_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-server_2.10/2.4.3/play-netty-server_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-docs_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-netty-server_2.10" type="jar" ext="jar" status="successful" details="" size="216961" time="115" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-netty-server_2.10/jars/play-netty-server_2.10-2.4.3.jar">
+					<artifact name="play-netty-server_2.10" type="jar" ext="jar" status="no" details="" size="216961" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-netty-server_2.10/jars/play-netty-server_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-server_2.10/2.4.3/play-netty-server_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -176,24 +176,24 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-server_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005831" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+			<revision name="2.4.3" status="release" pubdate="20150907005831" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2684" time="83" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-server_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-server_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.10/2.4.3/play-server_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="3433" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-server_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.10/2.4.3/play-server_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-netty-server_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-server_2.10" type="jar" ext="jar" status="successful" details="" size="255721" time="227" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-server_2.10/jars/play-server_2.10-2.4.3.jar">
+					<artifact name="play-server_2.10" type="jar" ext="jar" status="no" details="" size="255721" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-server_2.10/jars/play-server_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.10/2.4.3/play-server_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005840" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+			<revision name="2.4.3" status="release" pubdate="20150907005840" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="8402" time="148" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.10/2.4.3/play_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="7860" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.10/2.4.3/play_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-server_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play_2.10" type="jar" ext="jar" status="successful" details="" size="3856410" time="218" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play_2.10/jars/play_2.10-2.4.3.jar">
+					<artifact name="play_2.10" type="jar" ext="jar" status="no" details="" size="3856410" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play_2.10/jars/play_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.10/2.4.3/play_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -310,25 +310,25 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-slf4j_2.10">
-			<revision name="2.3.13" status="release" pubdate="20150903112804" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+			<revision name="2.3.13" status="release" pubdate="20150903112804" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2537" time="90" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.13.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.13.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.13/akka-slf4j_2.10-2.3.13.pom"/>
+				<metadata-artifact status="no" details="" size="3202" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.13.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.13/akka-slf4j_2.10-2.3.13.pom"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="2.3.13" rev-constraint-default="2.3.13" rev-constraint-dynamic="2.3.13" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="akka-slf4j_2.10" type="jar" ext="jar" status="successful" details="" size="15520" time="78" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.13.jar">
+					<artifact name="akka-slf4j_2.10" type="jar" ext="jar" status="no" details="" size="15520" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.13.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.13/akka-slf4j_2.10-2.3.13.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-actor_2.10">
-			<revision name="2.3.13" status="release" pubdate="20150903112610" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+			<revision name="2.3.13" status="release" pubdate="20150903112610" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="1925" time="83" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/ivy-2.3.13.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/ivy-2.3.13.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.3.13/akka-actor_2.10-2.3.13.pom"/>
+				<metadata-artifact status="no" details="" size="2793" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/ivy-2.3.13.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.3.13/akka-actor_2.10-2.3.13.pom"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="2.3.13" rev-constraint-default="2.3.13" rev-constraint-dynamic="2.3.13" callerrev="2.4.3"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="compile, runtime" rev="2.3.13" rev-constraint-default="2.3.13" rev-constraint-dynamic="2.3.13" callerrev="2.3.13"/>
 				<artifacts>
-					<artifact name="akka-actor_2.10" type="jar" ext="jar" status="successful" details="" size="2818119" time="180" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.13.jar">
+					<artifact name="akka-actor_2.10" type="jar" ext="jar" status="no" details="" size="2818119" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.13.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.3.13/akka-actor_2.10-2.3.13.jar"/>
 					</artifact>
 				</artifacts>
@@ -473,12 +473,12 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-json_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005711" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+			<revision name="2.4.3" status="release" pubdate="20150907005711" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4168" time="81" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-json_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-json_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.4.3/play-json_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="4724" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-json_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.4.3/play-json_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-json_2.10" type="jar" ext="jar" status="successful" details="" size="622471" time="95" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-json_2.10/jars/play-json_2.10-2.4.3.jar">
+					<artifact name="play-json_2.10" type="jar" ext="jar" status="no" details="" size="622471" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-json_2.10/jars/play-json_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.4.3/play-json_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -562,14 +562,13 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.10.5" status="release" pubdate="20150227015445" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.5/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
-				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
-			"/>
-				<metadata-artifact status="successful" details="" size="1941" time="135" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.5.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.pom"/>
+			<revision name="2.10.5" status="release" pubdate="20150227015445" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.5/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2835" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="2.4.3"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="scala-reflect" type="jar" ext="jar" status="successful" details="" size="3206179" time="202" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.5.jar">
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3206179" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar"/>
 					</artifact>
 				</artifacts>
@@ -602,38 +601,38 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-datacommons_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005630" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+			<revision name="2.4.3" status="release" pubdate="20150907005630" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1516" time="89" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.4.3/play-datacommons_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="2671" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.4.3/play-datacommons_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-datacommons_2.10" type="jar" ext="jar" status="successful" details="" size="5517" time="74" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/jars/play-datacommons_2.10-2.4.3.jar">
+					<artifact name="play-datacommons_2.10" type="jar" ext="jar" status="no" details="" size="5517" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/jars/play-datacommons_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.4.3/play-datacommons_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-functional_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005640" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+			<revision name="2.4.3" status="release" pubdate="20150907005640" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1513" time="122" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-functional_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-functional_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.4.3/play-functional_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="2668" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-functional_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.4.3/play-functional_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-functional_2.10" type="jar" ext="jar" status="successful" details="" size="401709" time="118" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-functional_2.10/jars/play-functional_2.10-2.4.3.jar">
+					<artifact name="play-functional_2.10" type="jar" ext="jar" status="no" details="" size="401709" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-functional_2.10/jars/play-functional_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.4.3/play-functional_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-iteratees_2.10">
-			<revision name="2.4.3" status="release" pubdate="20150907005650" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+			<revision name="2.4.3" status="release" pubdate="20150907005650" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2472" time="84" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/ivy-2.4.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/ivy-2.4.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.4.3/play-iteratees_2.10-2.4.3.pom"/>
+				<metadata-artifact status="no" details="" size="3307" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/ivy-2.4.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.4.3/play-iteratees_2.10-2.4.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<caller organisation="com.typesafe.play" name="play-server_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="2.4.3" rev-constraint-default="2.4.3" rev-constraint-dynamic="2.4.3" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="play-iteratees_2.10" type="jar" ext="jar" status="successful" details="" size="782109" time="106" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/jars/play-iteratees_2.10-2.4.3.jar">
+					<artifact name="play-iteratees_2.10" type="jar" ext="jar" status="no" details="" size="782109" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/jars/play-iteratees_2.10-2.4.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.4.3/play-iteratees_2.10-2.4.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -659,13 +658,13 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-stm" name="scala-stm_2.10">
-			<revision name="0.7" status="release" pubdate="20121222033826" resolver="public" artresolver="public" homepage="http://nbronson.github.com/scala-stm/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+			<revision name="0.7" status="release" pubdate="20121222033826" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nbronson.github.com/scala-stm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
 				<license name="BSD" url="https://github.com/nbronson/scala-stm/blob/master/LICENSE.txt"/>
-				<metadata-artifact status="successful" details="" size="1422" time="108" location="/home/ubuntu/.ivy2/cache/org.scala-stm/scala-stm_2.10/ivy-0.7.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.scala-stm/scala-stm_2.10/ivy-0.7.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom"/>
+				<metadata-artifact status="no" details="" size="2663" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-stm/scala-stm_2.10/ivy-0.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="0.7" rev-constraint-default="0.7" rev-constraint-dynamic="0.7" callerrev="2.4.3"/>
 				<caller organisation="com.typesafe.play" name="play-iteratees_2.10" conf="compile, runtime" rev="0.7" rev-constraint-default="0.7" rev-constraint-dynamic="0.7" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="scala-stm_2.10" type="jar" ext="jar" status="successful" details="" size="650514" time="113" location="/home/ubuntu/.ivy2/cache/org.scala-stm/scala-stm_2.10/jars/scala-stm_2.10-0.7.jar">
+					<artifact name="scala-stm_2.10" type="jar" ext="jar" status="no" details="" size="650514" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-stm/scala-stm_2.10/jars/scala-stm_2.10-0.7.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar"/>
 					</artifact>
 				</artifacts>
@@ -710,10 +709,9 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.10.5" status="release" pubdate="20150227015430" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.5/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
-				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
-         "/>
-				<metadata-artifact status="successful" details="" size="2044" time="257" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.5.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.5/scala-library-2.10.5.pom"/>
+			<revision name="2.10.5" status="release" pubdate="20150227015430" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.5/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2669" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.5/scala-library-2.10.5.pom"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="2.10.5"/>
 				<caller organisation="com.typesafe.play" name="play-docs_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="2.4.3"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="2.4.3"/>
@@ -730,7 +728,7 @@
 				<caller organisation="org.scala-stm" name="scala-stm_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.7"/>
 				<caller organisation="com.typesafe.play" name="play-iteratees_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="2.4.3"/>
 				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="successful" details="" size="7130772" time="335" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar">
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7130772" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.5/scala-library-2.10.5.jar"/>
 					</artifact>
 				</artifacts>
