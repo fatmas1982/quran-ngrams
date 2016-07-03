@@ -3,6 +3,10 @@ package com.language.processing.service
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
+import scala.concurrent.future
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
 
 // Author: Saqib Ali
 
@@ -36,6 +40,29 @@ object NGram {
   }
   
   
+  
+  
+  
+   def generateNGramFuture(signs: List[String], numOfWords: Int): Future[List[(String, Int)]] = Future { // Scala N-gram secret sauce 
+    (for( i <- 0 to signs.length-1) yield  signs(i)
+      .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")
+      .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")
+      .split(" ")
+      .sliding(numOfWords)
+      .filter(_.size==numOfWords)
+      .toList
+      .map(_.mkString(" "))
+    )
+       .flatten
+       .groupBy(x => x)   
+       .toList   
+       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
+       .filter{case(ngram, occurrences) => occurrences > 1}
+  }
+  
+  
+  
+  
   def longestNGram(signs: List[String]): List[(String, Int)] = {
     
        val conf = new SparkConf()
@@ -44,7 +71,7 @@ object NGram {
     //val sc = new SparkContext(conf)
     //sc.stop
     
-      val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      val all = ((8 to 24).toArray.par.foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       .sortWith(_._1.length > _._1.length)
      
       all.map(calc(_, all))
