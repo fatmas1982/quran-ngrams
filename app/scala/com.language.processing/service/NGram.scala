@@ -86,9 +86,9 @@ object NGram {
       
       
 
-      val distData = sc.parallelize(all)
+    //  val distData = sc.parallelize(all)
       
-      val ngrams = distData.map(calc(_, all))
+    //  val ngrams = distData.map(calc(_, all))
 
 /*      
       val ngrams = distData.map(calc(_, all))
