@@ -77,7 +77,7 @@ object NGram {
        val conf = new SparkConf()
         .setMaster(System.getenv("spark_cluster"))
         .setAppName("Simple Application")
-       val sc = new SparkContext(conf)
+    //   val sc = new SparkContext(conf)
     
     
       val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
@@ -98,7 +98,7 @@ object NGram {
 
       
 
-      sc.stop
+    //  sc.stop
       
       
       
