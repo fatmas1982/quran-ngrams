@@ -65,7 +65,7 @@ object NGram {
     //   val sc = new SparkContext(conf)
     
     
-//      val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
+      val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
     //val x = List(8 to 24)
 
 
@@ -78,7 +78,7 @@ object NGram {
     )
   */
   
-  val concat = time {(8 to 24).par.map(generateNGram(signs, _)).foldLeft(List[(String, Int)]()) {(total, n) => total ::: n}  }
+//  val concat = time {(8 to 24).par.map(generateNGram(signs, _)).foldLeft(List[(String, Int)]()) {(total, n) => total ::: n}  }
 
       
 
@@ -98,8 +98,8 @@ object NGram {
       
       
       
-      time {concat.sortWith(_._1.length > _._1.length)
-      .map(calc(_, concat))
+      time {all.sortWith(_._1.length > _._1.length)
+      .map(calc(_, all))
       .distinct
       .sortBy(_._2)
       .reverse} 
