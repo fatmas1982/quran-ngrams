@@ -74,7 +74,7 @@ object NGram {
 //    val sc = new SparkContext(conf)
     
     
-      val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+    //  val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
       
       val result24  = generateNGramFuture(signs, 24)
       val result23  = generateNGramFuture(signs, 23)
