@@ -83,13 +83,12 @@ object NGram {
 
       sc.stop
 
-     /*
       all.sortWith(_._1.length > _._1.length)
       .map(calc(_, all))
       .distinct
       .sortBy(_._2)
-      .reverse */
-      ngrams.collect.toList
+      .reverse 
+//      ngrams.collect.toList
       
   }
      
