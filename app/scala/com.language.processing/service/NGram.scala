@@ -73,6 +73,8 @@ object NGram {
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
 
       val distData = sc.parallelize(all)
+      
+      distData.map(calc(_, all))
 
       sc.stop
 
