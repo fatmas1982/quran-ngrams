@@ -74,7 +74,7 @@ object NGram {
 
       val distData = sc.parallelize(all)
       
-      val ngrams = distData.map(calc(_, all.sortWith(_._1.length > _._1.length)))
+      val ngrams = distData.map(calc(_, all))
             .distinct
             .sortBy(_._2)
 
