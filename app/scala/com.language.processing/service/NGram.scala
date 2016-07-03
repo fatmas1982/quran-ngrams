@@ -71,7 +71,7 @@ object NGram {
        val conf = new SparkConf()
         .setMaster(System.getenv("spark_cluster"))
         .setAppName("Simple Application")
-      // val sc = new SparkContext(conf)
+       val sc = new SparkContext(conf)
     
     
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
@@ -80,7 +80,7 @@ object NGram {
       
       
 
-//      val distData = sc.parallelize(all)
+      val distData = sc.parallelize(all)
 /*      
       val ngrams = distData.map(calc(_, all))
             .distinct
@@ -89,7 +89,7 @@ object NGram {
 
       
 
-      //sc.stop
+      sc.stop
 
       all.sortWith(_._1.length > _._1.length)
       .map(calc(_, all))
