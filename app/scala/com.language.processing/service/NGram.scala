@@ -74,16 +74,23 @@ object NGram {
 
       val distData = sc.parallelize(all)
       
-      distData.map(calc(_, all))
+      val ngrams = distData.map(calc(_, all.sortWith(_._1.length > _._1.length)))
+            .distinct
+            .sortBy(_._2)
+
+
+      
 
       sc.stop
 
-     
+     /*
       all.sortWith(_._1.length > _._1.length)
       .map(calc(_, all))
       .distinct
       .sortBy(_._2)
-      .reverse 
+      .reverse */
+      ngrams
+      
   }
      
   
