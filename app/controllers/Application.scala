@@ -7,6 +7,10 @@ import play.api.Play.current
 import scala.util.matching.Regex.Match
 import com.language.processing.service._
 import com.language.processing.data._
+import scala.util.{Success, Failure}
+import scala.concurrent.{Await, Future}
+import scala.concurrent.future
+
 
 object Application extends Controller {
   
@@ -21,8 +25,14 @@ object Application extends Controller {
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = numOfWords.getOrElse(-1)
     val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
-    if (numOfWordsInt == -1)
-      Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
+    if (numOfWordsInt == -1){
+      var result = NGram.longestNGram(signs)
+      
+        result onSuccess {
+        case result => Ok(views.html.index(result, numOfWordsInt))
+    }
+    //  Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
+    }
     else
       Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
   }
@@ -30,7 +40,7 @@ object Application extends Controller {
  def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
     val signs = Quran.getSignsWithSurahNames.map(_(2))
-    Ok(views.html.unique(NGram.longestNGram(signs), numOfWordsInt))
+    Ok(views.html.unique(NGram.generateNGram(signs, 2), numOfWordsInt))
   }
   
   

@@ -66,7 +66,7 @@ object NGram {
   
   
   
-  def longestNGram(signs: List[String]): List[(String, Int)] = {
+  def longestNGram(signs: List[String]): Future[List[(String, Int)]] = {
     
        val conf = new SparkConf()
     .setMaster(System.getenv("spark_cluster"))
@@ -86,27 +86,11 @@ object NGram {
         r23 <- result23
         r22 <- result22
     } yield (r24 ::: r23 ::: r22)
+    
+    
+    result
   
-  
-            val ngrams = Nil
-  
-      
-    result onComplete {
-      case Success(content) => {
-        return content
-
-      }
-      
-    }
-      
-      
-  
-      
-     // val ngrams = Await.result
-
-      
-      ngrams
-      
+ 
       
       /*
 
