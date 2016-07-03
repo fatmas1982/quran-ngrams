@@ -78,7 +78,7 @@ object NGram {
     )
   */
   
-  val concat = time {(8 to 24).par.map(generateNGram(signs, _)).reduce(_ ::: _)}
+  val concat = time {(8 to 24).par.map(generateNGram(signs, _)).foldLeft(List[(String, Int)]()) {(total, n) => total ::: n}  }
 
       
 
