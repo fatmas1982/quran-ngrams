@@ -89,7 +89,7 @@ object NGram {
       .distinct
       .sortBy(_._2)
       .reverse */
-      ngrams
+      ngrams.collect.toList
       
   }
      
