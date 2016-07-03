@@ -46,28 +46,13 @@ object NGram {
   
   
   
-   def generateNGramFuture(signs: List[String], numOfWords: Int): Future[List[(String, Int)]] = Future { // Scala N-gram secret sauce 
-    (for( i <- 0 to signs.length-1) yield  signs(i)
-      .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")
-      .replaceAll("([\\p{P}&&[^()]]+\\s*)+$", "")
-      .split(" ")
-      .sliding(numOfWords)
-      .filter(_.size==numOfWords)
-      .toList
-      .map(_.mkString(" "))
-    )
-       .flatten
-       .groupBy(x => x)   
-       .toList   
-       .map{case(ngram, occurrences) => (ngram, occurrences.length)}
-       .filter{case(ngram, occurrences) => occurrences > 1}
-  }
+
   
   def time[R](block: => R): R = {
     val t0 = System.nanoTime()
     val result = block    // call-by-name
     val t1 = System.nanoTime()
-    println("Elapsed time: " + (t1 - t0) + "ns")
+    println("Elapsed time: " + (t1 - t0)/1000000000 + "s")
     result
 }
   
@@ -81,9 +66,20 @@ object NGram {
     
     
       val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
-    
-    
-      
+    //val x = List(8 to 24)
+
+
+/*
+    val result =  List(8 to 24).par.aggregate(List(("a",1), ("a",2)))
+    (
+        (x,y) => x ::: y,
+
+        (x) => generateNGram(signs, x)
+    )
+  */
+  
+  val concat = (8 to 24).par.map(generateNGram(signs, _)).reduce(_ ::: _)
+
       
 
     //  val distData = sc.parallelize(all)
@@ -102,7 +98,7 @@ object NGram {
       
       
       
-      time {all.sortWith(_._1.length > _._1.length)
+      time {concat.sortWith(_._1.length > _._1.length)
       .map(calc(_, all))
       .distinct
       .sortBy(_._2)
