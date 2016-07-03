@@ -5,6 +5,7 @@ import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
 import scala.concurrent.future
 import scala.concurrent.{Await, Future}
+import scala.util.{Success, Failure}
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -72,9 +73,8 @@ object NGram {
     .setAppName("Simple Application")
 //    val sc = new SparkContext(conf)
     
-    val ngrams = Nil
+    
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
-      
       
       val result24  = generateNGramFuture(signs, 24)
       val result23  = generateNGramFuture(signs, 23)
@@ -86,18 +86,26 @@ object NGram {
         r23 <- result23
         r22 <- result22
     } yield (r24 ::: r23 ::: r22)
+  
+  
+            val ngrams = Nil
+  
       
-      
-       result onSuccess {
-        case result => {ngrams :: result}
+    result onComplete {
+      case Success(content) => {
+        return content
+
       }
       
+    }
       
+      
+  
       
      // val ngrams = Await.result
 
       
-      all
+      ngrams
       
       
       /*
