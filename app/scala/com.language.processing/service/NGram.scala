@@ -108,6 +108,7 @@ object NGram {
         r14 <- result14
         r13 <- result13
         r12 <- result12
+        r11 <- result11
         r10 <- result10
     } yield (r24 ::: r23 ::: r22 ::: r21 ::: r20 ::: r19 ::: r18 ::: r17 ::: r16 ::: r15 ::: r14 ::: r13 ::: r12 ::: r11 ::: r10 )
     
