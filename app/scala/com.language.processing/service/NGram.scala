@@ -4,6 +4,8 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
 import scala.concurrent.future
+import scala.concurrent.{Await, Future}
+
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
@@ -68,11 +70,39 @@ object NGram {
        val conf = new SparkConf()
     .setMaster(System.getenv("spark_cluster"))
     .setAppName("Simple Application")
-    val sc = new SparkContext(conf)
+//    val sc = new SparkContext(conf)
     
+    val ngrams = Nil
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      
+      
+      val result24  = generateNGramFuture(signs, 24)
+      val result23  = generateNGramFuture(signs, 23)
+      val result22  = generateNGramFuture(signs, 22)
+      
+      
+       val result = for {
+        r24 <- result24
+        r23 <- result23
+        r22 <- result22
+    } yield (r24 ::: r23 ::: r22)
+      
+      
+       result onSuccess {
+        case result => {ngrams ::: result}
+      }
+      
+      
+      
+     // val ngrams = Await.result
 
-      val distData = sc.parallelize(all)
+      
+      ngrams
+      
+      
+      /*
+
+//      val distData = sc.parallelize(all)
 /*      
       val ngrams = distData.map(calc(_, all))
             .distinct
@@ -89,7 +119,7 @@ object NGram {
       .sortBy(_._2)
       .reverse 
 //      ngrams.collect.toList
-      
+      */
   }
      
   
