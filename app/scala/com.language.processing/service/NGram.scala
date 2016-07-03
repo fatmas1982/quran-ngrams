@@ -63,7 +63,13 @@ object NGram {
        .filter{case(ngram, occurrences) => occurrences > 1}
   }
   
-  
+  def time[R](block: => R): R = {
+    val t0 = System.nanoTime()
+    val result = block    // call-by-name
+    val t1 = System.nanoTime()
+    println("Elapsed time: " + (t1 - t0) + "ns")
+    result
+}
   
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
@@ -74,7 +80,7 @@ object NGram {
        val sc = new SparkContext(conf)
     
     
-      val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
+      val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
     
     
       
@@ -93,12 +99,14 @@ object NGram {
       
 
       sc.stop
-
-      all.sortWith(_._1.length > _._1.length)
+      
+      
+      
+      time {all.sortWith(_._1.length > _._1.length)
       .map(calc(_, all))
       .distinct
       .sortBy(_._2)
-      .reverse 
+      .reverse} 
 //      ngrams.collect.toList
       
   }
