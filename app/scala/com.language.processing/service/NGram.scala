@@ -73,11 +73,11 @@ object NGram {
       val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
 
       val distData = sc.parallelize(all)
-      
+/*      
       val ngrams = distData.map(calc(_, all))
             .distinct
             .sortBy(_._2)
-
+*/
 
       
 
