@@ -66,58 +66,19 @@ object NGram {
   
   
   
-  def longestNGram(signs: List[String]): Future[List[(String, Int)]] = {
+  def longestNGram(signs: List[String]): List[(String, Int)] = {
     
        val conf = new SparkConf()
-    .setMaster(System.getenv("spark_cluster"))
-    .setAppName("Simple Application")
-//    val sc = new SparkContext(conf)
+        .setMaster(System.getenv("spark_cluster"))
+        .setAppName("Simple Application")
+      // val sc = new SparkContext(conf)
     
     
-    //  val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
-      
-      val result24  = generateNGramFuture(signs, 24)
-      val result23  = generateNGramFuture(signs, 23)
-      val result22  = generateNGramFuture(signs, 22)
-      val result21  = generateNGramFuture(signs, 21)
-      val result20  = generateNGramFuture(signs, 20)
-      val result19  = generateNGramFuture(signs, 19)
-      val result18  = generateNGramFuture(signs, 18)
-      val result17  = generateNGramFuture(signs, 17)
-      val result16  = generateNGramFuture(signs, 16)
-      val result15  = generateNGramFuture(signs, 15)
-      val result14  = generateNGramFuture(signs, 14)
-      val result13  = generateNGramFuture(signs, 13)
-      val result12  = generateNGramFuture(signs, 12)
-      val result11  = generateNGramFuture(signs, 11)
-      val result10  = generateNGramFuture(signs, 10)
-      
-      
-      
-       val result = for {
-        r24 <- result24
-        r23 <- result23
-        r22 <- result22
-        r21 <- result21
-        r20 <- result20
-        r19 <- result19
-        r18 <- result18
-        r17 <- result17
-        r16 <- result16
-        r15 <- result15
-        r14 <- result14
-        r13 <- result13
-        r12 <- result12
-        r11 <- result11
-        r10 <- result10
-    } yield (r24 ::: r23 ::: r22 ::: r21 ::: r20 ::: r19 ::: r18 ::: r17 ::: r16 ::: r15 ::: r14 ::: r13 ::: r12 ::: r11 ::: r10 )
+      val all = ((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))
     
     
-    result
-  
- 
       
-      /*
+      
 
 //      val distData = sc.parallelize(all)
 /*      
@@ -128,7 +89,7 @@ object NGram {
 
       
 
-      sc.stop
+      //sc.stop
 
       all.sortWith(_._1.length > _._1.length)
       .map(calc(_, all))
@@ -136,7 +97,7 @@ object NGram {
       .sortBy(_._2)
       .reverse 
 //      ngrams.collect.toList
-      */
+      
   }
      
   

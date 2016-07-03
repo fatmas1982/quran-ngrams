@@ -7,12 +7,6 @@ import play.api.Play.current
 import scala.util.matching.Regex.Match
 import com.language.processing.service._
 import com.language.processing.data._
-import scala.concurrent.future
-import scala.concurrent.{Await, Future}
-import scala.util.{Success, Failure}
-import scala.concurrent.Future
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.duration._
 
 object Application extends Controller {
   
@@ -24,43 +18,19 @@ object Application extends Controller {
 
   }
     
-  def index(numOfWords: Option[Int]) = Action.async {
-      val numOfWordsInt : Int = numOfWords.getOrElse(-1)
-
-  val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
-  
-  var result = NGram.longestNGram(signs)
-  result.map(content => Ok(views.html.index(content, numOfWordsInt)))
-}  
-    
-    
-    
-/*    
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = numOfWords.getOrElse(-1)
     val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
-    if (numOfWordsInt == -1){
-      var result = NGram.longestNGram(signs)
-          result onComplete {
-      case Success(content) => {
-        Ok(views.html.index(content, numOfWordsInt))
-      }
-      case Failure(t) => {
-        Ok(views.html.index(Nil, numOfWordsInt))
-      }
-    }
-      
-
-    //  Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
-    }
+    if (numOfWordsInt == -1)
+      Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
     else
       Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
-  }*/
+  }
   
  def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
     val signs = Quran.getSignsWithSurahNames.map(_(2))
-    Ok(views.html.unique(NGram.generateNGram(signs, 2), numOfWordsInt))
+    Ok(views.html.unique(NGram.longestNGram(signs), numOfWordsInt))
   }
   
   
