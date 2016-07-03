@@ -65,7 +65,8 @@ object NGram {
     //   val sc = new SparkContext(conf)
     
     
-      val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
+    //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i)))}
+      val all = time {(8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)}
     //val x = List(8 to 24)
 
 
