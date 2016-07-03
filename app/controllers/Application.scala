@@ -24,27 +24,38 @@ object Application extends Controller {
 
   }
     
+  def index(numOfWords: Option[Int]) = Action.async {
+      val numOfWordsInt : Int = numOfWords.getOrElse(-1)
+
+  val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
+  
+  var result = NGram.longestNGram(signs)
+  result.map(content => Ok(views.html.index(content, numOfWordsInt)))
+}  
+    
+    
+    
+/*    
   def index(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = numOfWords.getOrElse(-1)
     val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
     if (numOfWordsInt == -1){
       var result = NGram.longestNGram(signs)
+          result onComplete {
+      case Success(content) => {
+        Ok(views.html.index(content, numOfWordsInt))
+      }
+      case Failure(t) => {
+        Ok(views.html.index(Nil, numOfWordsInt))
+      }
+    }
       
-      
-         result.onComplete({
-          case Success(listInt) => {
-           case result => Ok(views.html.index(result, numOfWordsInt))
-        }
-        case Failure(exception) => {
-          //Do something with my error
-        }
-        })
-        
+
     //  Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
     }
     else
       Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
-  }
+  }*/
   
  def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
