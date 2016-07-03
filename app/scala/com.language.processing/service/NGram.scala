@@ -66,33 +66,7 @@ object NGram {
     
     
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
-      val all = time {((8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
-    //val x = List(8 to 24)
-
-
-/*
-    val result =  List(8 to 24).par.aggregate(List(("a",1), ("a",2)))
-    (
-        (x,y) => x ::: y,
-
-        (x) => generateNGram(signs, x)
-    )
-  */
-  
-//  val concat = time {(8 to 24).par.map(generateNGram(signs, _)).foldLeft(List[(String, Int)]()) {(total, n) => total ::: n}  }
-
-      
-
-    //  val distData = sc.parallelize(all)
-      
-    //  val ngrams = distData.map(calc(_, all))
-
-/*      
-      val ngrams = distData.map(calc(_, all))
-            .distinct
-            .sortBy(_._2)
-*/
-
+      val all = time {((3 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
       
 
     //  sc.stop
