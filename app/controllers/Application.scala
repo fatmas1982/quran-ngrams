@@ -7,10 +7,12 @@ import play.api.Play.current
 import scala.util.matching.Regex.Match
 import com.language.processing.service._
 import com.language.processing.data._
-import scala.util.{Success, Failure}
-import scala.concurrent.{Await, Future}
 import scala.concurrent.future
-
+import scala.concurrent.{Await, Future}
+import scala.util.{Success, Failure}
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
 
 object Application extends Controller {
   
@@ -28,9 +30,16 @@ object Application extends Controller {
     if (numOfWordsInt == -1){
       var result = NGram.longestNGram(signs)
       
-        result onSuccess {
-        case result => Ok(views.html.index(result, numOfWordsInt))
-    }
+      
+         result.onComplete({
+          case Success(listInt) => {
+           case result => Ok(views.html.index(result, numOfWordsInt))
+        }
+        case Failure(exception) => {
+          //Do something with my error
+        }
+        })
+        
     //  Ok(views.html.index(NGram.longestNGram(signs), numOfWordsInt))
     }
     else
