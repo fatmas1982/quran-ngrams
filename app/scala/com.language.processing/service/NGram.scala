@@ -89,7 +89,7 @@ object NGram {
       
       
        result onSuccess {
-        case result => {ngrams ::: result}
+        case result => {ngrams :: result}
       }
       
       
@@ -97,7 +97,7 @@ object NGram {
      // val ngrams = Await.result
 
       
-      ngrams
+      all
       
       
       /*
