@@ -28,7 +28,6 @@ object NGram {
       .split(" ")
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
-      .toList
       .map(_.mkString(" "))
       //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
       //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
