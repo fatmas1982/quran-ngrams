@@ -47,9 +47,9 @@ object NGram {
   
 
   
-  def time[R](block: => R): R = {
+  def time[R](block: => R): R = { //Profile methods / code in Scala. Useful in timining the execution of scala code source: http://stackoverflow.com/q/9160001/420558
     val t0 = System.nanoTime()
-    val result = block    // call-by-name
+    val result = block    
     val t1 = System.nanoTime()
     println("Elapsed time: " + (t1 - t0)/1000000000 + "s")
     result
@@ -58,7 +58,7 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
-      val all = time {((7 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
+      val all = time {((6 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
       time {all
       .map(calc(_, all))
       .distinct
