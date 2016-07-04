@@ -6,7 +6,7 @@ import org.apache.spark.SparkConf
 import scala.concurrent.future
 import scala.concurrent.{Await, Future}
 import scala.util.{Success, Failure}
-
+import scala.collection.parallel.immutable.ParVector
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
@@ -64,12 +64,12 @@ object NGram {
         .setAppName("Simple Application")
         val sc = new SparkContext(conf)
     
-    
+    val v = ParVector.range(8, 24)
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
     //  val all = time {((7 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
     
    // val all = time {sc.parallelize(24 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)}
-      val all = time {sc.parallelize(24 to 24).map(i => generateNGram(signs, i)).collect}
+      val all = time {v.map(i => generateNGram(signs, i)).reduce(_ ::: _)}
 
       sc.stop
       
