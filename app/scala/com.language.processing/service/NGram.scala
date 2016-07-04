@@ -62,7 +62,7 @@ object NGram {
        val conf = new SparkConf()
         .setMaster(System.getenv("spark_cluster"))
         .setAppName("Simple Application")
-        val sc = new SparkContext(conf)
+  //      val sc = new SparkContext(conf)
     
     val v = ParVector.range(8, 24)
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
@@ -71,7 +71,7 @@ object NGram {
    // val all = time {sc.parallelize(24 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)}
       val all = time {v.map(i => generateNGram(signs, i)).reduce(_ ::: _)}
 
-      sc.stop
+ //     sc.stop
       
       
       
