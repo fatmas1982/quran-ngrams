@@ -46,7 +46,7 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
-      val all = time {((6 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
+      val all = time {((8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
       time {all
       .map(calc(_, all))
       .distinct
