@@ -82,7 +82,7 @@ object NGram {
        val all = time {(8 to 24).map(i => generateNGramFuture(signs, i))}
 
         val fut = Future.reduce(all)(_ ::: _)
-  val result = Await.result(fut, 8 second)
+  val result = Await.result(fut, 29 second)
 
 
   time {result
