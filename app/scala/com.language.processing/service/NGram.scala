@@ -34,13 +34,7 @@ object NGram {
        .map{case(ngram, occurrences) => (ngram, occurrences.length)}
        .filter{case(ngram, occurrences) => occurrences > 1}
   }
-  
-  
-  
-  
-  
 
-  
   def time[R](block: => R): R = { //Profile methods / code in Scala. Useful in timining the execution of scala code source: http://stackoverflow.com/q/9160001/420558
     val t0 = System.nanoTime()
     val result = block    
