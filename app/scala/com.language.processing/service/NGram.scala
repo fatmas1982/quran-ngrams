@@ -141,9 +141,9 @@ object NGram {
         Await.result(fut13, 10 second) ::
         Await.result(fut12, 10 second) ::
         Await.result(fut11, 10 second) ::
-        Await.result(fut10, 10 second) ::
-        Await.result(fut9, 10 second) ::
-        Await.result(fut8, 10 second) ::
+    //    Await.result(fut10, 10 second) ::
+    //    Await.result(fut9, 10 second) ::
+    //    Await.result(fut8, 10 second) ::
     //    Await.result(fut7, 10 second) ::
   //      Await.result(fut6, 10 second) ::
 //Await.result(fut5, 10 second) ::
