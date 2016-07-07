@@ -22,7 +22,7 @@ object NGram {
       .split(" ")
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
-      .map(_.mkString(" ")) 
+      .map(_.mkString(" "))
       //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
       //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
 
@@ -46,118 +46,12 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
-    /*  val all = time {((8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
+      val all = time {((8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
       time {all
       .map(calc(_, all))
       .distinct
       .sortBy(_._2)
       .reverse} 
-      */
-      
-      
-        time {
-    val fut24 = Future {
-      generateNGram(signs, 24).sortWith(_._1.length > _._1.length)
-    }
-    val fut23 = Future {
-      generateNGram(signs, 23).sortWith(_._1.length > _._1.length)
-    }
-    val fut22 = Future {
-      generateNGram(signs, 22).sortWith(_._1.length > _._1.length)
-    }
-    val fut21 = Future {
-      generateNGram(signs, 21).sortWith(_._1.length > _._1.length)
-    }
-    val fut20 = Future {
-      generateNGram(signs, 20).sortWith(_._1.length > _._1.length)
-    }
-    val fut19 = Future {
-      generateNGram(signs, 19).sortWith(_._1.length > _._1.length)
-    }
-    val fut18 = Future {
-      generateNGram(signs, 18).sortWith(_._1.length > _._1.length)
-    }
-    val fut17 = Future {
-      generateNGram(signs, 17).sortWith(_._1.length > _._1.length)
-    }
-    val fut16 = Future {
-      generateNGram(signs, 16).sortWith(_._1.length > _._1.length)
-    }
-    val fut15 = Future {
-      generateNGram(signs, 15).sortWith(_._1.length > _._1.length)
-    }
-    val fut14 = Future {
-      generateNGram(signs, 14).sortWith(_._1.length > _._1.length)
-    }
-    val fut13 = Future {
-      generateNGram(signs, 13).sortWith(_._1.length > _._1.length)
-    }
-    val fut12 = Future {
-      generateNGram(signs, 12).sortWith(_._1.length > _._1.length)
-    }
-    val fut11 = Future {
-      generateNGram(signs, 11).sortWith(_._1.length > _._1.length)
-    }
-    val fut10 = Future {
-      generateNGram(signs, 10).sortWith(_._1.length > _._1.length)
-    }
-    val fut9 = Future {
-      generateNGram(signs, 9).sortWith(_._1.length > _._1.length)
-    }
-    val fut8 = Future {
-      generateNGram(signs, 8).sortWith(_._1.length > _._1.length)
-    }
-    val fut7 = Future {
-      generateNGram(signs, 7).sortWith(_._1.length > _._1.length)
-    }
-    val fut6 = Future {
-      generateNGram(signs, 6).sortWith(_._1.length > _._1.length)
-    }
-    val fut5 = Future {
-      generateNGram(signs, 5).sortWith(_._1.length > _._1.length)
-    }
-    val fut4 = Future {
-      generateNGram(signs, 4).sortWith(_._1.length > _._1.length)
-    }
-    val fut3 = Future {
-      generateNGram(signs, 3).sortWith(_._1.length > _._1.length)
-    }
-    val fut2 = Future {
-      generateNGram(signs, 2).sortWith(_._1.length > _._1.length)
-    }
-
-    val alltemp =
-        Await.result(fut24, 20 second) ::
-        Await.result(fut23, 20 second) ::
-        Await.result(fut22, 20 second) ::
-        Await.result(fut21, 20 second) ::
-        Await.result(fut20, 20 second) ::
-        Await.result(fut19, 20 second) ::
-        Await.result(fut18, 20 second) ::
-        Await.result(fut17, 20 second) ::
-        Await.result(fut16, 20 second) ::
-        Await.result(fut15, 20 second) ::
-        Await.result(fut14, 20 second) ::
-        Await.result(fut13, 20 second) ::
-        Await.result(fut12, 20 second) ::
-        Await.result(fut11, 20 second) ::
-    //    Await.result(fut10, 10 second) ::
-    //    Await.result(fut9, 10 second) ::
-    //    Await.result(fut8, 10 second) ::
-    //    Await.result(fut7, 10 second) ::
-  //      Await.result(fut6, 10 second) ::
-//Await.result(fut5, 10 second) ::
-        Nil
-
-    val all = alltemp.flatten
-    
-    val result = all
-      .map(calc(_, all))
-      .distinct
-      .sortBy(_._2)
-      .reverse
-    result
-    }
   }
      
   
