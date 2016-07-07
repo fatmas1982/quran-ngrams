@@ -127,20 +127,20 @@ object NGram {
     }
 
     val alltemp =
-        Await.result(fut24, 10 second) ::
-        Await.result(fut23, 10 second) ::
-        Await.result(fut22, 10 second) ::
-        Await.result(fut21, 10 second) ::
-        Await.result(fut20, 10 second) ::
-        Await.result(fut19, 10 second) ::
-        Await.result(fut18, 10 second) ::
-        Await.result(fut17, 10 second) ::
-        Await.result(fut16, 10 second) ::
-        Await.result(fut15, 10 second) ::
-        Await.result(fut14, 10 second) ::
-        Await.result(fut13, 10 second) ::
-        Await.result(fut12, 10 second) ::
-        Await.result(fut11, 10 second) ::
+        Await.result(fut24, 20 second) ::
+        Await.result(fut23, 20 second) ::
+        Await.result(fut22, 20 second) ::
+        Await.result(fut21, 20 second) ::
+        Await.result(fut20, 20 second) ::
+        Await.result(fut19, 20 second) ::
+        Await.result(fut18, 20 second) ::
+        Await.result(fut17, 20 second) ::
+        Await.result(fut16, 20 second) ::
+        Await.result(fut15, 20 second) ::
+        Await.result(fut14, 20 second) ::
+        Await.result(fut13, 20 second) ::
+        Await.result(fut12, 20 second) ::
+        Await.result(fut11, 20 second) ::
     //    Await.result(fut10, 10 second) ::
     //    Await.result(fut9, 10 second) ::
     //    Await.result(fut8, 10 second) ::
