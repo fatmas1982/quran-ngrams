@@ -127,7 +127,7 @@ object NGram {
     }
 
     val alltemp =
-      Await.result(fut24, 10 second) ::
+        Await.result(fut24, 10 second) ::
         Await.result(fut23, 10 second) ::
         Await.result(fut22, 10 second) ::
         Await.result(fut21, 10 second) ::
@@ -144,9 +144,9 @@ object NGram {
         Await.result(fut10, 10 second) ::
         Await.result(fut9, 10 second) ::
         Await.result(fut8, 10 second) ::
-        Await.result(fut7, 10 second) ::
-        Await.result(fut6, 10 second) ::
-        Await.result(fut5, 10 second) ::
+    //    Await.result(fut7, 10 second) ::
+  //      Await.result(fut6, 10 second) ::
+//Await.result(fut5, 10 second) ::
         Nil
 
     val all = alltemp.flatten
