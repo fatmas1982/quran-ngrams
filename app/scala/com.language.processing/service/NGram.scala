@@ -90,7 +90,7 @@ object NGram {
     }
 
 
-    (10 to 24).foreach(
+    (15 to 24).foreach(
       generateNGramFuture(signs, _).onComplete {
         case Success(value) => addToFruits(value)
         case Failure(ex) => println("This grinder needs a replacement, seriously!")
