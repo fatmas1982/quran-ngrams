@@ -54,12 +54,6 @@ object NGram {
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .map(_.mkString(" "))
-
-
-      //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
-      //.map(_.replaceAll("[\\p{P}\\s]+$", ""))
-
-
       )
       .flatten
       .groupBy(x => x)
@@ -70,20 +64,21 @@ object NGram {
   
   def longestNGram(signs: List[String]): List[(String, Int)] = {
     //  val all = time {((8 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)}
-   /*   val all = time {((8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
+      val all = time {((8 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)}
       time {all
       .map(calc(_, all))
       .distinct
       .sortBy(_._2)
-      .reverse} */
+      .reverse} 
       
       
+     /* 
         time {
 
 
     var allBuffer = new ListBuffer[(String, Int)]()
 
-    def addToFruits(values: List[(String, Int)]) = {
+    def addToAll(values: List[(String, Int)]) = {
 
       values.foreach(allBuffer += _)
 
@@ -92,8 +87,8 @@ object NGram {
 
     (20 to 24).foreach(
       generateNGramFuture(signs, _).onComplete {
-        case Success(value) => addToFruits(value)
-        case Failure(ex) => println("This grinder needs a replacement, seriously!")
+        case Success(value) => addToAll(value)
+        case Failure(ex) => println("No go on the calculating grams")
       }
     )
 
@@ -113,7 +108,7 @@ object NGram {
     result
 
 
-  }
+  }*/
       
   }
      
