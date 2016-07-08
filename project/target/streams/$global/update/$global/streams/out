@@ -13305,7 +13305,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 21594ms :: artifacts dl 872ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 62681ms :: artifacts dl 1923ms[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT compile produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT runtime produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT test produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-test.xml[0m
@@ -13319,5 +13319,5 @@
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT docs produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT pom produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT scala-tool produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (21594ms resolve - 872ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (62681ms resolve - 1923ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

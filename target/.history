@@ -29,3 +29,18 @@ exit
 ~compile
 clean
 ~compile
+run
+dist
+playGenerateSecret
+dist
+quit
+exit
+~compile
+playGenerateSecret
+dist
+exit
+dist
+git push
+quit
+exit
+git add .

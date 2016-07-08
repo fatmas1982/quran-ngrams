@@ -29,7 +29,7 @@ object Application extends Controller {
   
  def unique(numOfWords: Option[Int]) = Action {
     val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-    val signs = Quran.getSignsWithSurahNames.map(_(2))
+    val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
     Ok(views.html.unique(NGram.longestNGram(signs), numOfWordsInt))
   }
   
@@ -42,7 +42,7 @@ object Application extends Controller {
  
   def search(searchText: Option[String]) = Action {
     val ngramString : String = searchText.getOrElse("")
-    val signs = Quran.getSignsWithSurahNames
+    val signs = QuranPickthall.getSignsWithSurahNames
     Ok(views.html.search(QuranSearch.generateSearchResults(signs, ngramString), ngramString))
   } 
 }

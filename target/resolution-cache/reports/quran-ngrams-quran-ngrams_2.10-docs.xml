@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="docs"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160705163553"/>
+		date="20160708000227"/>
 	<dependencies>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
 			<revision name="2.4.4" status="release" pubdate="20141125022902" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
