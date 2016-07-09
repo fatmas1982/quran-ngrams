@@ -13,8 +13,3 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _ )
-libraryDependencies += "org.apache.spark" %% "spark-core" % "1.6.2"
-
-dependencyOverrides ++= Set(
-  "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.4"
-)
