@@ -36,7 +36,7 @@ object Application extends Controller {
   
   def legomenon(repeated: Option[Int]) = Action {
     val repeatedInt : Int = repeated.getOrElse(1)
-    val signs = QuranArabic.getSignsWithSurahNames
+    val signs = QuranPickthall.getSignsWithSurahNames
     Ok(views.html.legomenon(Legomenon.getLegomenon(signs, repeatedInt), repeatedInt))
   }
  

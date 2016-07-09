@@ -431,7 +431,7 @@
 [0m[[0mdebug[0m] [0m	found org.apache.commons#commons-compress;1.4.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -439,7 +439,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.tukaani#xz;1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.tukaani#xz;1.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.tukaani#xz;1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.tukaani#xz;1.0[0m
 [0m[[0mdebug[0m] [0m	found org.tukaani#xz;1.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)][0m
@@ -485,6 +485,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.tukaani#xz;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.tukaani#xz;1.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime(*)][0m
@@ -2539,7 +2540,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -4309,7 +4310,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -6908,7 +6909,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -9288,7 +9289,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -11060,7 +11061,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.apache.commons#commons-compress;1.4.1 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -13305,7 +13306,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 62681ms :: artifacts dl 1923ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 18886ms :: artifacts dl 730ms[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT compile produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT runtime produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT test produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-test.xml[0m
@@ -13319,5 +13320,5 @@
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT docs produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT pom produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#workspace-build;0.1-SNAPSHOT scala-tool produced in /home/ubuntu/workspace/project/target/resolution-cache/reports/default-workspace-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (62681ms resolve - 1923ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (18886ms resolve - 730ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
