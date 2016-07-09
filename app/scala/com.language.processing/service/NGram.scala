@@ -2,9 +2,7 @@ package com.language.processing.service
 
 import scala.collection.mutable.ListBuffer
 
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext._
-import org.apache.spark.SparkConf
+
 import scala.concurrent.future
 import scala.concurrent.{Await, Future}
 import scala.util.{Success, Failure}
