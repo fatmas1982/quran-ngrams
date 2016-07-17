@@ -52,6 +52,8 @@ object NGram {
       .sliding(numOfWords)
       .filter(_.size==numOfWords)
       .map(_.mkString(" "))
+      .map(_.replaceAll("([\\p{P}&&[^()]]+\\s*)+$", ""))
+      .map(_.replaceAll("([\\p{P}&&[^()]]+\\s*)+$", ""))
       )
       .flatten
       .groupBy(x => x)
