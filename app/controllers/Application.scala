@@ -27,11 +27,7 @@ object Application extends Controller {
       Ok(views.html.index(NGram.generateNGram(signs, numOfWordsInt), numOfWordsInt))
   }
   
- def unique(numOfWords: Option[Int]) = Action {
-    val numOfWordsInt : Int = if (numOfWords.getOrElse(10) < 1) 1 else numOfWords.getOrElse(1)
-    val signs = QuranPickthall.getSignsWithSurahNames.map(_(2))
-    Ok(views.html.unique(NGram.longestNGram(signs), numOfWordsInt))
-  }
+
   
   
   def legomenon(repeated: Option[Int]) = Action {

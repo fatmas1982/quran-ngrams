@@ -5,7 +5,6 @@
 # Home page
 GET     /                           controllers.Application.index(numOfWords: Option[Int])
 GET     /search                           controllers.Application.search(ngram: Option[String])
-GET     /unique                     controllers.Application.unique(numOfWords: Option[Int])  
 GET     /legomenon                     controllers.Application.legomenon(repeated: Option[Int])  
 
 
