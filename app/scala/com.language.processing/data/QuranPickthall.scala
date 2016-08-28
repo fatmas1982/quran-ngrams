@@ -4131,7 +4131,7 @@ var signs = Array(
 "39|69|And the earth shineth with the light of her Lord, and the Book is set up, and the prophets and the witnesses are brought, and it is judged between them with truth, and they are not wronged." , 
 "39|70|And each soul is paid in full for what it did. And He is Best Aware of what they do." , 
 "39|71|And those who disbelieve are driven unto hell in troops till, when they reach it and the gates thereof are opened, and the warders thereof say unto them: Came there not unto you messengers of your own, reciting unto you the revelations of your Lord and warning you of the meeting of this your Day? they say: Yea, verily. But the word of doom of disbelievers is fulfilled." , 
-"39|72|It is said (unto them): Enter ye the gates of hell to dwell therein. Thus hapless is the journey's end of the scorners." , 
+"39|72|It is said (unto them): Enter ye the gates of hell, to dwell therein. Thus hapless is the journey's end of the scorners." , 
 "39|73|And those who keep their duty to their Lord are driven unto the Garden in troops till, when they reach it, and the gates thereof are opened, and the warders thereof say unto them: Peace be unto you! Ye are good, so enter ye (the Garden of delight), to dwell therein;" , 
 "39|74|They say: Praise be to Allah, Who hath fulfilled His promise unto us and hath made us inherit the land, sojourning in the Garden where we will! So bounteous is the wage of workers." , 
 "39|75|And thou (O Muhammad) seest the angels thronging round the Throne, hymning the praises of their Lord. And they are judged aright. And it is said: Praise be to Allah, the Lord of the Worlds!" , 
