@@ -4865,7 +4865,7 @@ var signs = Array(
 "54|15|And verily We left it as a token; but is there any that remembereth?" , 
 "54|16|Then see how (dreadful) was My punishment after My warnings!" , 
 "54|17|And in truth We have made the Qur'an easy to remember; but is there any that remembereth?" , 
-"54|18|(The tribe of) A'ad rejected warnings. Then how (dreadful) was My punishment after My warnings." , 
+"54|18|(The tribe of) A'ad rejected warnings. Then see how (dreadful) was My punishment after My warnings." , 
 "54|19|Lo! We let loose on them a raging wind on a day of constant calamity," , 
 "54|20|Sweeping men away as though they were uprooted trunks of palm-trees." , 
 "54|21|Then see how (dreadful) was My punishment after My warnings!" , 
