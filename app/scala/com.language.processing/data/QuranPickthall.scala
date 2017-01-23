@@ -5173,7 +5173,7 @@ var signs = Array(
 "61|6|And when Jesus son of Mary said: O Children of Israel! Lo! I am the messenger of Allah unto you, confirming that which was (revealed) before me in the Torah, and bringing good tidings of a messenger who cometh after me, whose name is the Praised One. Yet when he hath come unto them with clear proofs, they say: This is mere magic." , 
 "61|7|And who doeth greater wrong than he who inventeth a lie against Allah when he is summoned unto Al-Islam? And Allah guideth not wrongdoing folk." , 
 "61|8|Fain would they put out the light of Allah with their mouths, but Allah will perfect His light however much the disbelievers are averse." , 
-"61|9|He it is Who hath sent His messenger with the guidance and the religion of Truth, that He may make it to prevail over all religion however much idolaters may be averse." , 
+"61|9|He it is Who hath sent His messenger with the guidance and the Religion of Truth, that He may make it to prevail over all religion however much idolaters may be averse." , 
 "61|10|O ye who believe! Shall I show you a commerce that will save you from a painful doom?" , 
 "61|11|Ye should believe in Allah and His messenger, and should strive for the cause of Allah with your wealth and your lives. That is better for you, if ye did but know." , 
 "61|12|He will forgive you your sins and bring you into Gardens underneath which rivers flow, and pleasant dwellings in Gardens of Eden. That is the supreme triumph." , 
