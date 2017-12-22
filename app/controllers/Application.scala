@@ -1,14 +1,14 @@
 package controllers
 
-import play.api._
+import javax.inject._
 import play.api.mvc._
-import play.api.cache.Cache
-import play.api.Play.current
+
 import scala.util.matching.Regex.Match
 import com.language.processing.service._
 import com.language.processing.data._
 
-object Application extends Controller {
+@Singleton
+class Application @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
   
   
   def main(args: Array[String]): Unit = {
