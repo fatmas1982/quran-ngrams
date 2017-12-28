@@ -66,8 +66,8 @@ object NGram {
       time{
       //val all = ((6 to 24).foldRight(List[(String, Int)]())((i, l) => l ::: generateNGram(signs, i))).sortWith(_._1.length > _._1.length)
       //val all = ((6 to 24).map(i => generateNGram(signs, i)).reduce(_ ::: _)).sortWith(_._1.length > _._1.length)
-      val ngramfutures = (19 to 30).map(i => generateNGramFuture(signs, i)) // Calculate Ngrams using Scala Futures for paralllelization
-      val fut = Future.reduce(ngramfutures)(_ ::: _) // Reduce the Futures
+      val ngramfutures = (15 to 30).map(i => generateNGramFuture(signs, i)) // Calculate Ngrams using Scala Futures for paralllelization
+      val fut = Future.reduceLeft(ngramfutures)(_ ::: _) // Reduce the Futures
       val allresult = Await.result(fut, 20 seconds)    
       val all = allresult.sortWith(_._1.length > _._1.length)
       all.map(calc(_, all))
